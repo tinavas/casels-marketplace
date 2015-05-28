@@ -1,0 +1,741 @@
+[23-04-2015 04:01:08] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:01:08] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:01:08] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVhXVHJsbEJvZjRpLUpVSXZ1emRvdG94NkoyY3NKUk5zaVNPZHBSb1VILWpIMmZUY3dGNlF0UEkzdl81SHpLU3FLdWxzNlJnWG5iT2w5T3Y6RUZYeUpPSzUxc0tnVG5rMTU3MWlIbTFiU203WTY3R0huZVp1THMtREVndWl6XzladGtsbFhNdkNRa0ZCSERuYU5qVzI4RndkZWdTRVhMWGM=
+[23-04-2015 04:01:08] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:01:08] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015vi9ydOT4CKi8AjlmRJid72wckQ1IHNaCvWtt9dVObsE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015vi9ydOT4CKi8AjlmRJid72wckQ1IHNaCvWtt9dVObsE
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919298142980486862787
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"EUR","total":"20.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.30","price":"7.50"}]},"description":"Payment description","invoice_number":"5539174433a7c"}]}
+
+[23-04-2015 04:01:09] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"},{"field":"redirect_urls","issue":"This field required when payment_method is 'paypal'"},{"field":"transactions","issue":"Item currency code should be same as the transaction currency code"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"f4532393d3f5c"}
+
+
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015MGEulDdd3olZ8FF1MMxmMBKDHbcO4qiKw76Ni7k6rTI","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015MGEulDdd3olZ8FF1MMxmMBKDHbcO4qiKw76Ni7k6rTI
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198054142980512844114
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"EUR","total":"20.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.30","price":"7.50"}]},"description":"Payment description","invoice_number":"5539184806c13"}]}
+
+[23-04-2015 04:05:28] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"redirect_urls","issue":"This field required when payment_method is 'paypal'"},{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"},{"field":"transactions","issue":"Item currency code should be same as the transaction currency code"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"f9745db69f923"}
+
+
+[23-04-2015 04:12:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:12:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:12:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:12:09] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:12:09] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015VGrUONZWoaNEsmhq28nPM4pJ0UIUH28TH9QzM34W3UE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015VGrUONZWoaNEsmhq28nPM4pJ0UIUH28TH9QzM34W3UE
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142980552924871
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"20.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.30","price":"7.50"}]},"description":"Argyle Interactive","invoice_number":"553919d9b71a8"}]}
+
+[23-04-2015 04:12:10] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"0986c8f33d68b"}
+
+
+[23-04-2015 04:13:48] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:13:48] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:13:48] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:13:48] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:13:48] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Ho4wHQZOGiqwPBQkaedRgGPzxPRIEB2i7p5U3ZkU6uc","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Ho4wHQZOGiqwPBQkaedRgGPzxPRIEB2i7p5U3ZkU6uc
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 1760322719805414298056286889
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"20.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.30","price":"7.50"}]},"description":"Argyle Interactive","invoice_number":"55391a3c64678"}]}
+
+[23-04-2015 04:13:49] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"8a143fed156d1"}
+
+
+[23-04-2015 04:19:41] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:19:41] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:19:41] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:19:41] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:19:41] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015FVm57Ma1QHvjBKQFyajW3vseUSsGlbnd6Kw.eDql4A0","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015FVm57Ma1QHvjBKQFyajW3vseUSsGlbnd6Kw.eDql4A0
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919784142980598164648
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.70","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391b9dca2a4"}]}
+
+[23-04-2015 04:19:42] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"1016654ccced0"}
+
+
+[23-04-2015 04:20:37] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:20:37] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:20:37] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:20:37] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:20:37] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015lSF0-ersA12iLkIkiNR1SOOB16k3jM0OwLzuWGcDaH8","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015lSF0-ersA12iLkIkiNR1SOOB16k3jM0OwLzuWGcDaH8
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919400142980603757397
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.70","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391bd5ba3e1"}]}
+
+[23-04-2015 04:20:38] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"710af9d1b5efb"}
+
+
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015LhFNNK.YM45VQnWG0-c9exX5OMklBjZMzWFVXV-q7lg","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015LhFNNK.YM45VQnWG0-c9exX5OMklBjZMzWFVXV-q7lg
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198054142980613353263
+[23-04-2015 04:22:13] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391c3508c54"}]}
+
+[23-04-2015 04:22:14] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"2ab9ca429d3d4"}
+
+
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0150TmAwqNlzcbx8lGZE.tYatbWVtCZXgMQPXCJ96vNP3g","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0150TmAwqNlzcbx8lGZE.tYatbWVtCZXgMQPXCJ96vNP3g
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919209142980617264941
+[23-04-2015 04:22:52] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391c5c38e7e"}]}
+
+[23-04-2015 04:22:53] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"efc4ba819e533"}
+
+
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015267vyZHTwjV0PYnIy87qB-SHzSKsX-mac3BpdHZwZe4","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015267vyZHTwjV0PYnIy87qB-SHzSKsX-mac3BpdHZwZe4
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919298142980618827931
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391c6d0414f"}]}
+
+[23-04-2015 04:23:09] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"ef5855608eef6"}
+
+
+[23-04-2015 04:36:58] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:36:58] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:36:58] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:36:58] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:36:58] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015nfxqgsuY.8I-drF6plsmtsnVO1VEH7yi0DYQfEchC5I","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015nfxqgsuY.8I-drF6plsmtsnVO1VEH7yi0DYQfEchC5I
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198060142980701840943
+[23-04-2015 04:37:04] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391faaa330a"}]}
+
+[23-04-2015 04:37:05] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"c42cd9ebc2328"}
+
+
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015RNYcoP0kIw5nzj2Z0pvLsMyWvbl59rEXwmGr6.Wiy3A","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015RNYcoP0kIw5nzj2Z0pvLsMyWvbl59rEXwmGr6.Wiy3A
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919400142980705535626
+[23-04-2015 04:37:35] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55391fcf59a93"}]}
+
+[23-04-2015 04:37:36] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"f3d5e7d3b7187"}
+
+
+[23-04-2015 04:40:05] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:40:05] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:40:05] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:40:05] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:40:05] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015WhC.HtDtp2Unx1mOg0Bh4VCD5wtfIcaXMcLu2qOF7nA","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015WhC.HtDtp2Unx1mOg0Bh4VCD5wtfIcaXMcLu2qOF7nA
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919755142980720526586
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55392065dd438"}]}
+
+[23-04-2015 04:40:06] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"71e67a6b978de"}
+
+
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015KaMWZp5.eHDsFsVKW9zeKPc7PR21bEuHuc2IZNt2MuE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015KaMWZp5.eHDsFsVKW9zeKPc7PR21bEuHuc2IZNt2MuE
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142980725454060
+[23-04-2015 04:40:54] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"5539209631b60"}]}
+
+[23-04-2015 04:40:55] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"47e38b7c8a402"}
+
+
+[23-04-2015 04:41:44] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:41:44] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:41:44] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:41:44] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:41:44] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015TJSGnXTfNAfjxkwS-0xU8v1dXYU9N23o328V20LUncs","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015TJSGnXTfNAfjxkwS-0xU8v1dXYU9N23o328V20LUncs
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919209142980730447790
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553920c8e8a0c"}]}
+
+[23-04-2015 04:41:45] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"a8bf06d37fe02"}
+
+
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015zH4xNz4WAdOxonQA60fVvLs546g3WjWXBNtS4wFAOzc","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015zH4xNz4WAdOxonQA60fVvLs546g3WjWXBNtS4wFAOzc
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198060142980737115403
+[23-04-2015 04:42:51] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"5539210b2ab0b"}]}
+
+[23-04-2015 04:42:52] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"c406fd49620e3"}
+
+
+[23-04-2015 04:43:33] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:43:33] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:43:33] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:43:33] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:43:33] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Wr0nX2Eqnlh6Db.en0ESx5bzXPPlhbpoXGmg2j47WWw","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Wr0nX2Eqnlh6Db.en0ESx5bzXPPlhbpoXGmg2j47WWw
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919400142980741354301
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55392135c8f95"}]}
+
+[23-04-2015 04:43:34] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"5e42217468ae5"}
+
+
+[23-04-2015 04:44:40] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:44:40] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:44:40] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:44:40] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:44:40] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015T386oxwktvB4e.0yiX01C2qmonXxq3Z6WsvfLlYAlJk","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015T386oxwktvB4e.0yiX01C2qmonXxq3Z6WsvfLlYAlJk
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919755142980748011926
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"5539217872a8d"}]}
+
+[23-04-2015 04:44:41] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"500b4ab75faba"}
+
+
+[23-04-2015 04:45:08] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:45:08] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:45:08] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:45:08] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:45:08] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0155R7VOBiff3qeKNzA-pDoQeO0G5zP0VH85FZCFVnkNZc","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0155R7VOBiff3qeKNzA-pDoQeO0G5zP0VH85FZCFVnkNZc
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198060142980750838770
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.35"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55392194799d1"}]}
+
+[23-04-2015 04:45:09] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"1a8c27074c34e"}
+
+
+[23-04-2015 04:46:02] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:46:02] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:02] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:46:02] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:46:02] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015AEL6W9qc9rBmA1Ky4Hmr1AehPrHB45cV5vv7AvmVCh8","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015AEL6W9qc9rBmA1Ky4Hmr1AehPrHB45cV5vv7AvmVCh8
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227191975514298075623068
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553921caae616"}]}
+
+[23-04-2015 04:46:03] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"976199333ee56"}
+
+
+[23-04-2015 04:46:25] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:46:25] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:25] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:46:25] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:46:25] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015674gx.fM4Sonux1RrGobZMPFP-mvYvaC-bMm7BW3KCw","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015674gx.fM4Sonux1RrGobZMPFP-mvYvaC-bMm7BW3KCw
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198054142980758536301
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553921e1839be"}]}
+
+[23-04-2015 04:46:26] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"036dc5833b0f5"}
+
+
+[23-04-2015 04:46:49] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:46:49] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:49] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:46:49] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:46:49] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015IJL45sYVyZJwNNVRF9izpQwG7h7a2c19WLJ5LL6EO.k","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015IJL45sYVyZJwNNVRF9izpQwG7h7a2c19WLJ5LL6EO.k
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142980760916887
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553921f9f087b"}]}
+
+[23-04-2015 04:46:50] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"65a9586b38312"}
+
+
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015w3B2pCtM0Xf8qSWFYF.I9R4CfJzxgdIBD.PfVc4yf8U","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015w3B2pCtM0Xf8qSWFYF.I9R4CfJzxgdIBD.PfVc4yf8U
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919784142980768162720
+[23-04-2015 04:48:01] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"5539224129287"}]}
+
+[23-04-2015 04:48:02] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"b4178b5a2e8e1"}
+
+
+[23-04-2015 04:48:23] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 04:48:23] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:48:23] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 04:48:23] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 04:48:23] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015k-oI4uK6wTOWqfpdswglQ.VLOeOyK-788DyiFY3GywQ","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015k-oI4uK6wTOWqfpdswglQ.VLOeOyK-788DyiFY3GywQ
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198054142980770335638
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"Ground Coffee 40 oz","description":"Ground Coffee 40 oz","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553922578b185"}]}
+
+[23-04-2015 04:48:24] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"7aaf56061c455"}
+
+
+[23-04-2015 05:02:33] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 05:02:33] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 05:02:33] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 05:02:33] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 05:02:33] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0150p4nyH9A4cWqX56lVla9atWTc5ysexWdP-qCq26RDgE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0150p4nyH9A4cWqX56lVla9atWTc5ysexWdP-qCq26RDgE
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919784142980855334239
+[23-04-2015 05:02:34] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.00"},"item_list":{"items":[{"name":"This item is a test for shipping calculation","description":"http://aidevserver.co/projects/casels/public/product_images/casels_552416a92b31e.jpg","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"553925a9e28a1"}]}
+
+[23-04-2015 05:02:35] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"30ff81454d0cd"}
+
+
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A01519xup-ERbQdJSMDkEkF3aezberh0ivudC3HC-hU70y4","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A01519xup-ERbQdJSMDkEkF3aezberh0ivudC3HC-hU70y4
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142980869054349
+[23-04-2015 05:04:50] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"0.35"},"item_list":{"items":[{"name":"This item is a test for shipping calculation","description":"http://aidevserver.co/projects/casels/public/product_images/casels_552416a92b31e.jpg","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"5539263261928"}]}
+
+[23-04-2015 05:04:51] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"693bf6c02cbc6"}
+
+
+[23-04-2015 06:39:37] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 06:39:37] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 06:39:37] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 06:39:37] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 06:39:37] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015v2n6MIOg-LkoniUshC8lmqKET6LlBtZo8IEF8K8ZNII","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015v2n6MIOg-LkoniUshC8lmqKET6LlBtZo8IEF8K8ZNII
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919941142981437761678
+[23-04-2015 06:39:38] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"0.35"},"item_list":{"items":[{"name":"This item is a test for shipping calculation","description":"http://aidevserver.co/projects/casels/public/product_images/casels_552416a92b31e.jpg","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55393c69db37a"}]}
+
+[23-04-2015 06:39:39] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"3405c02e41df2"}
+
+
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015qzPk964CLVUyQRNsXcDF8kHThHu715vwQptXDnX5Iqc","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015qzPk964CLVUyQRNsXcDF8kHThHu715vwQptXDnX5Iqc
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198054142981460253957
+[23-04-2015 06:43:22] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"0.35"},"item_list":{"items":[{"name":"This item is a test for shipping calculation","description":"http://aidevserver.co/projects/casels/public/product_images/casels_552416a92b31e.jpg","currency":"USD","quantity":1,"tax":"0.07","price":"4.99"}]},"description":"Argyle Interactive","invoice_number":"55393d4a2bff5"}]}
+
+[23-04-2015 06:43:23] PayPal\Core\PPHttpConnection: FINE: Response : {"name":"VALIDATION_ERROR","details":[{"field":"transactions","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"a8998fb3807fa"}
+
+
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A01591tr7AqrKvurXW37vziL2.L5Rq6VvH627rmPwCHNA6Q","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A01591tr7AqrKvurXW37vziL2.L5Rq6VvH627rmPwCHNA6Q
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919755142981566845240
+[23-04-2015 07:01:08] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"305.00"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"305.00","currency":"USD"}]}}]}
+
+[23-04-2015 07:01:09] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-4NK96647WC725750KKU4UC5I","create_time":"2015-04-23T19:01:09Z","update_time":"2015-04-23T19:01:09Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"305.00","currency":"USD","details":{"subtotal":"305.00"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"305.00","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4NK96647WC725750KKU4UC5I","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3F364238AR6264258","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4NK96647WC725750KKU4UC5I/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:01:20] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:01:20] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:01:20] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:01:20] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:01:20] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015WiCAhhlij1kSCQqC-xL9.WcVpsCJQ3wg-VFB6eTKz8k","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015WiCAhhlij1kSCQqC-xL9.WcVpsCJQ3wg-VFB6eTKz8k
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142981568017153
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"305.00"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"305.00","currency":"USD"}]}}]}
+
+[23-04-2015 07:01:21] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-73B02009HD232094NKU4UDAI","create_time":"2015-04-23T19:01:21Z","update_time":"2015-04-23T19:01:21Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"305.00","currency":"USD","details":{"subtotal":"305.00"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"305.00","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-73B02009HD232094NKU4UDAI","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5P795228H8270771C","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-73B02009HD232094NKU4UDAI/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:03:54] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:03:54] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:03:54] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:03:54] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:03:54] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A01501tU0qAcWPqpGGZ2ezCJgFd.QkvGVqS60gOwIxuqYAE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A01501tU0qAcWPqpGGZ2ezCJgFd.QkvGVqS60gOwIxuqYAE
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919906142981583422044
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"0.35"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"0.35","currency":"USD"}]}}]}
+
+[23-04-2015 07:03:55] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-68372647DS579240BKU4UEGY","create_time":"2015-04-23T19:03:55Z","update_time":"2015-04-23T19:03:55Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"0.35","currency":"USD","details":{"subtotal":"0.35"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"0.35","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-68372647DS579240BKU4UEGY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4CH94014LA5223620","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-68372647DS579240BKU4UEGY/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:04:18] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:04:18] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:04:18] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:04:18] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:04:18] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0153-QxqH6vmxOSxo3ZSjLhfgk.JhDc3jG8WfDG9ctHkTE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0153-QxqH6vmxOSxo3ZSjLhfgk.JhDc3jG8WfDG9ctHkTE
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142981585825169
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"0.35"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"0.35","currency":"USD"}]}}]}
+
+[23-04-2015 07:04:19] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-4DG60411DS476201DKU4UEMY","create_time":"2015-04-23T19:04:19Z","update_time":"2015-04-23T19:04:19Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"0.35","currency":"USD","details":{"subtotal":"0.35"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"0.35","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4DG60411DS476201DKU4UEMY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5DB04021B1396503T","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4DG60411DS476201DKU4UEMY/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:05:39] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:05:39] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:05:39] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:05:39] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:05:39] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0155pyy9krdGTqTR5h6hmFqrX9NhW-rBGzzO1PXk-sh4Nc","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0155pyy9krdGTqTR5h6hmFqrX9NhW-rBGzzO1PXk-sh4Nc
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198060142981593961265
+[23-04-2015 07:05:40] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"4.99"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"4.99","currency":"USD"}]}}]}
+
+[23-04-2015 07:05:41] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-9FS58249S61293341KU4UFBA","create_time":"2015-04-23T19:05:40Z","update_time":"2015-04-23T19:05:41Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"4.99","currency":"USD","details":{"subtotal":"4.99"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"4.99","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-9FS58249S61293341KU4UFBA","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9PV758001F3024234","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-9FS58249S61293341KU4UFBA/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:10:39] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:10:39] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:10:39] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:10:39] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:10:39] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015iJdwoYmf-TOpE6ZXNKl-I6IMAAcuX3UArE7nqXwRWlw","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015iJdwoYmf-TOpE6ZXNKl-I6IMAAcuX3UArE7nqXwRWlw
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919785142981623952425
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:10:40] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-6MM02199S3531602DKU4UHMA","create_time":"2015-04-23T19:10:40Z","update_time":"2015-04-23T19:10:40Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-6MM02199S3531602DKU4UHMA","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-71561487GG027041E","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-6MM02199S3531602DKU4UHMA/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015l070MUwf241yn2URhCYILXCoqf026bUzIR-XI32JcpE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015l070MUwf241yn2URhCYILXCoqf026bUzIR-XI32JcpE
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919298142981636256589
+[23-04-2015 07:12:42] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:12:43] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-33J45907P78516416KU4UIKY","create_time":"2015-04-23T19:12:43Z","update_time":"2015-04-23T19:12:43Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-33J45907P78516416KU4UIKY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3NK505379Y5932156","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-33J45907P78516416KU4UIKY/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:15:06] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:15:06] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:15:06] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:15:06] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:15:06] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015VNwMl8H9BwNWM6saY4skGy1o9NbW6lNAomuro8PKi.I","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015VNwMl8H9BwNWM6saY4skGy1o9NbW6lNAomuro8PKi.I
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271920290142981650645913
+[23-04-2015 07:15:07] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:15:08] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-7HE55925N9058181VKU4UJOY","create_time":"2015-04-23T19:15:07Z","update_time":"2015-04-23T19:15:07Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-7HE55925N9058181VKU4UJOY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7CS103759N2854606","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-7HE55925N9058181VKU4UJOY/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:15:25] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:15:25] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:15:25] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:15:25] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:15:25] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015tITmssBv990PWVIGMfDQld18pyomzHVZPE6CCozUFZk","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015tITmssBv990PWVIGMfDQld18pyomzHVZPE6CCozUFZk
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271919755142981652542080
+[23-04-2015 07:15:26] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:15:27] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-6YH05578TG8992150KU4UJTQ","create_time":"2015-04-23T19:15:26Z","update_time":"2015-04-23T19:15:26Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-6YH05578TG8992150KU4UJTQ","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-64Y695605C494171S","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-6YH05578TG8992150KU4UJTQ/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015hhPdfcIV4CsGXRJzOB-ZCjqeNnH4VT9NfNOWgZdzOkk","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015hhPdfcIV4CsGXRJzOB-ZCjqeNnH4VT9NfNOWgZdzOkk
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227198060142981702943846
+[23-04-2015 07:23:49] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:23:50] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-8HR770238K5407116KU4UNRQ","create_time":"2015-04-23T19:23:50Z","update_time":"2015-04-23T19:23:50Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-8HR770238K5407116KU4UNRQ","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-80173218YU736122V","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-8HR770238K5407116KU4UNRQ/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:24:22] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:24:22] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:24:22] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:24:22] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:24:22] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015.d6C3-7Kk2yDW1vwXn235h5IVor4rBwKNtB3dv8Jt68","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015.d6C3-7Kk2yDW1vwXn235h5IVor4rBwKNtB3dv8Jt68
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 17603227197978142981706237871
+[23-04-2015 07:24:23] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:24:24] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-2L0811383M7441546KU4UNZY","create_time":"2015-04-23T19:24:23Z","update_time":"2015-04-23T19:24:24Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-2L0811383M7441546KU4UNZY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5UJ13603CA472890C","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-2L0811383M7441546KU4UNZY/execute","rel":"execute","method":"POST"}]}
+
+
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVVHN1JfNWFTcVlCWmozU1NhdlQxckdaMHdxcV9ZSlVXVGduRW9fNGhnR0tlaGxMZWY5QXRsckZQc3JFQndlWmw4WHdsY2dwZDE0SzhyQjk6RUU5Q0xDOEF0dmoxNnQ0SkhPQjd5Qlpxd210LUlfemMzRmRHUFdHZzFkSUU3dlQ3OS1CNmlRbVpvNnRRS1VMY3dWTHlzMTlEQlQ2ZVhTRmw=
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Qbr5Plv0pHOu-iJHkqC-OgUnwSOHIC4QourP3iCjPOA","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.15.1 (lang=PHP;v=5.5.9-1ubuntu4.6;bit=64;os=Linux_3.13.0-43-generic;machine=x86_64;openssl=1.0.1f;curl=7.35.0)
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Qbr5Plv0pHOu-iJHkqC-OgUnwSOHIC4QourP3iCjPOA
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 176032271920290142981711964577
+[23-04-2015 07:25:19] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","redirect_urls":{"return_url":"http://aidevserver.co/projects/casels/public/checkout","cancel_url":"http://aidevserver.co/projects/casels/public/checkout/cancel"},"payer":{"payment_method":"paypal"},"transactions":[{"amount":{"currency":"USD","total":"5.34"},"description":"This is incredibly awesome.","item_list":{"items":[{"quantity":"1","name":"stuff","price":"5.34","currency":"USD"}]}}]}
+
+[23-04-2015 07:25:20] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-1VH63157DF3403055KU4UOIA","create_time":"2015-04-23T19:25:20Z","update_time":"2015-04-23T19:25:20Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"5.34","currency":"USD","details":{"subtotal":"5.34"}},"description":"This is incredibly awesome.","item_list":{"items":[{"name":"stuff","price":"5.34","currency":"USD","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-1VH63157DF3403055KU4UOIA","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7FV003801H079824J","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-1VH63157DF3403055KU4UOIA/execute","rel":"execute","method":"POST"}]}
+
+

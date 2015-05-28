@@ -1,0 +1,135 @@
+@include('header')
+<script>
+	function parallax() {
+		var prlx_lyr_1 = document.getElementById('main-picture-home');
+		prlx_lyr_1.style.top = (110+(window.pageYOffset / 7.5)) + 'px';
+		var prlx_lyr_2 = document.getElementById('home-text');
+		prlx_lyr_2.style.top = (170 - (window.pageYOffset / 1.23)) + 'px';
+	}
+	window.addEventListener("scroll", parallax, false);
+	
+	$(window).load(function() {
+		$('.home-logo-animater').animate(
+			{left:"0"},
+			
+				1500,
+				'easeInOutExpo'
+			);
+		$('.home-text-animater').delay(500).animate(
+			{left:"0"},
+			
+				1500,
+				'easeInOutExpo'
+			);
+		
+		var pictures = ['url(images/home-2.jpg)','url(images/home-3.jpg)','url(images/home-4.jpg)','url(images/casels-home-pic.jpg)','url(images/home-5.jpg)'],
+        textalign =['left','left','right','right','right'],
+			i = 0,
+        $body = $('#main-picture-home');
+    
+    	setInterval(function(){ 
+			$body.css('background', pictures[i++ % pictures.length]).css('background-size','cover');
+			$('#home-text').css('text-align', textalign[i++ % textalign.length]);
+							  
+							  }, 7000);
+		
+		var $changer = $("#home-text-changing"),
+			words = ['Red Mill','Gluten Free','Fresh Produce','Hand Cut Meat','Everthing'],
+			w = 0;
+		
+		setInterval(function(){ $changer.text(words[w++ % words.length]).fadeIn()},7000);
+	});
+</script>
+<div id="main-picture-home">
+	<div id="home-text">
+		<div class="wrapper">
+			<div class="home-logo-animater">
+				<img src={{ URL::asset( 'images/logo.png') }} alt="Casel's Logo" id="mobile-nav-logo" class="home-logo-animater" style="width:300px;margin-bottom:15px;" /><br />
+			</div>	
+			<div class="home-text-animater">
+				<h1 class="carousel-main">"The Best <br>of <span id="home-text-changing" style="">Everything</span>"</h1>
+				<p class="carousel-sub">Hand Selected for the Best Quality</p>
+				<p><a class="carousel-btn" href="#">Learn more</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div id="under-home-wrap">
+	 <div id="shop-bar">
+		 <div class="wrapper">
+			<h1>Checkout Casel's Online Marketplace Today!</h1>
+			<a href="shop" id="shop-bar-link">Shop Now</a>
+		 </div>
+	</div>
+	<div id="main-actions">
+		<div class="wrapper">
+			@if ($message = Session::get('alert'))
+			{{ $message }}
+			@endif
+			<div id="top-main-left">
+				<div class="top-main-wrap">
+					<div class="top-main-inner">
+						<a href="get-card" class="no-dec-link"><h1 class="top-main-title" id="top-title-1">Apply to Become A Casel's Preferred Customer</h1></a>
+						{{ HTML::link('get-card', 'Learn More', array('class' => 'top-main-cta', 'id' => 'top-main-cta-1')) }}
+
+					</div>
+				</div>
+			</div>
+			<div id="top-main-right">
+			  <div class="top-main-wrap">
+				  <div class="top-main-inner">
+					  <a href="shop" class="no-dec-link"><h1 class="top-main-title" id="top-title-2">Shop Casel's Online</h1></a>
+					  {{ HTML::link('shop', 'Shop Now', array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
+				  </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div id="secondary-actions">
+		<div class="wrapper">
+			<div id="secondary-main-left">
+				<div class="secondary-main-wrap">
+					<div class="secondary-main-inner">
+						<a href="delivery" class="no-dec-link"><h1 class="secondary-main-title" id="secondary-title-1">Home Delivery</h1></a>
+						{{ HTML::link('delivery', 'Learn More', array('class' => 'secondary-main-cta', 'id' => 'bottom-cta-1')) }}
+					</div>
+				</div>
+			</div>
+			<div id="secondary-main-center">
+				<div class="secondary-main-wrap">
+					<div class="secondary-main-inner">
+						<a href="catering" class="no-dec-link"><h1 class="secondary-main-title" id="secondary-title-2">Casel's Catering</h1></a>
+						{{ HTML::link('catering', 'Learn More', array('class' => 'secondary-main-cta', 'id' => 'bottom-cta-2')) }}
+					</div>
+				</div>
+			</div>
+			<div id="secondary-main-right">
+			  <div class="secondary-main-wrap">
+				  <div class="secondary-main-inner">
+					  <a href="circular" class="no-dec-link"><h1 class="secondary-main-title" id="secondary-title-3">Save with Casel's Weekly Circular</h1></a>
+					  {{ HTML::link('circular', 'View Now', array('class' => 'secondary-main-cta', 'id' => 'bottom-cta-3')) }}
+				  </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="email-list">
+		<h1 id="mailing-list-main">Sign up for our mailing list</h1>
+		<h2 id="mailing-list-sub">Stay up to date with all of our deals and new products</h2>
+		<div id="email-form">
+			{{ Form::open(array('url' => 'email')) }}
+				{{ Form::email('mailingListEmail', '', array('id' => 'email-input', 'placeholder' => 'Enter your email...')) }}
+				{{ Form::submit('Submit', array('id' => 'email-submit')) }}
+			{{ Form::close() }}
+		</div>
+	</div>
+</div>
+<!--END home page-->
+@include('footer')
