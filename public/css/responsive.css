@@ -138,6 +138,12 @@
 	clear:both;
 }
 }
+@media only screen and (max-width:1148px) {
+
+	#main-picture-home{margin-top:0;}
+}
+
+
 @media only screen and (min-width:955px) {
 	#mobile-nav-links {
 		display: none !important;
@@ -147,6 +153,9 @@
 @media only screen and (max-width:955px) {
 	#right-nav {
 		display: none;
+	}
+	#cart-bg.dropdown-toggle{
+		padding:5px 10px !important;
 	}
 
 	#cart-main {
@@ -212,6 +221,7 @@
 	#hours-check-mobile {
 	display:block;
 	}
+	
 }
 
 @media only screen and (max-width:850px) {
@@ -276,11 +286,40 @@
 	.in-cart-item h1 {
 		font-size: 20px;
 	}
+	#main-featured-area-1 {
+		height: 250px;
+		float: left;
+		width: 100%;
+		background-color: red;
+		margin-right: 2%;
+		position:relative;
+		margin:10px auto;
+	}
+	#main-featured-area-2 {
+		height: 250px;
+		float: left;
+		width: 100%;
+		background-color: red;
+		margin-right: 2%;
+		position:relative;
+		margin:10px auto;
+	}
+	#main-featured-area-3 {
+		height: 250px;
+		float: left;
+		width: 100%;
+		background-color: red;
+		position:relative;
+		margin:10px auto;
+	}
 }
 
 @media only screen and (min-width:825px) {
 	#specific-search-refine {
 		display: block !important;
+	}
+		#shop-refine-mobile-drop {
+	  display: block !important;
 	}
 }
 @media only screen and (max-width:770px) {
@@ -571,6 +610,7 @@
 	.carousel-main {
 		font-size: 33px;
 	}
+
 }
 
 @media only screen and (max-width:650px) {
@@ -583,7 +623,7 @@
 		float: none !important;
 		text-align: center;
 		margin: 0;
-		margin: 0 auto !important;
+		margin: 20px auto !important;
 	}
 
 	.in-cart-item {
@@ -592,6 +632,9 @@
 
 	.in-cart-item .btn-danger {
 		float: none !important;
+	}
+	.in-cart-item-img-wrap{
+		display:none;
 	}
 }
 
@@ -646,6 +689,21 @@
 	#shop-bar-link {
 		float: none;
 	}
+}
+@media only screen and (max-width:565px) {
+#left-contact {
+	float: left;
+	width: 100%;
+	margin-right: 0;
+	margin-top: 2.5%;
+}
+
+#right-contact {
+	float: left;
+	width: 100%;
+	margin-top: 2.5%;
+	text-align:center;
+}
 }
 
 @media only screen and (max-width:560px) {
@@ -769,5 +827,8 @@
 
 	.carousel-sub {
 		font-size: 16px;
+	}
+	#car-link {
+  		font-size: 15px;
 	}
 }

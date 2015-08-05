@@ -43,7 +43,16 @@ li {
 p {
 	font-family: 'Open Sans';
 }
-
+.carousel-caption {
+    width: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.84);
+    padding: 15px;
+}
+.carousel-caption p {
+    font-size: 16px;
+}
 /*==========TYPOGRAPHY==========*/
 @font-face {
 	font-family: lithos;
@@ -474,14 +483,14 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
   margin-top: 60px;
   display: inline;
   font-family: 'Yellowtail', cursive;
-  font-size: 80px;
+  font-size: 82px;
   padding: 10px;
   letter-spacing: 4px;
   text-align: left;
-  line-height: 70px;
+  line-height: 90px;
   color: #FFFFFF;
   width: auto;
-	text-shadow:2px 2px 4px black;
+  text-shadow: 3px 3px 5px black;
 
 }
 
@@ -513,18 +522,18 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 }
 
 #main-picture-home {
-	background: url(../images/casels-home-pic.jpg);
+	background: url(../images/home/Casels-36.jpg);
 	background-size: cover;
-	background-position: 50% 20%;
+	background-position: 50% 50%;
 	position: fixed;
-	width: 115%;
-	height: 115%;
-	margin-top: -260px;
+	width: 100%;
+	height: 100%;
+	margin-top: -70px;
 	z-index: 3;
 }
 
 #home-text {
-	top: 170px;
+	top: 200px;
 	position: fixed;
 	width: 100%;
 	text-align: right;
@@ -542,7 +551,8 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 
 
 #under-home-wrap {
-	margin-top: 375px;
+/* 	margin-top: 375px; */
+	margin-top:470px;
 	z-index: 4;
 	position: relative;
 	background-color: #EDE9E1;
@@ -632,7 +642,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	height: 350px;
 	display: inline-block;
 	float: left;
-	background: url(../images/home/preferred-customer.jpg);
+	background: url(../images/home/preferred-customer-new.jpg);
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: 100% 100%;
@@ -661,7 +671,9 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	height: 350px;
 	display: inline-block;
 	float: right;
-	background: url(../images/home/shop-home-bg-newer.jpg);
+/*  	background: url(../images/home/store.jpg); */
+	 background: url(../images/home/shop-bg-nov.jpg);
+/* 	background:url(../images/home/shop-now-2.jpg); */
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: 100% 100%;
@@ -755,7 +767,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	height: 220px;
 	display: inline-block;
 	float: left;
-	background: url(../images/home/delivery.jpg);
+	background: url(../images/home/catering-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: 100% 100%;
@@ -1336,6 +1348,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	color: #323232;
 	font-family: 'Open Sans',sans-serif;
 	border: 0px;
+	border:1px solid #323232;
 }
 
 .right-form-part input {
@@ -1345,6 +1358,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	color: #323232;
 	font-family: 'Open Sans',sans-serif;
 	border: 0px;
+	border:1px solid #323232;
 }
 
 .inner-form-left {
@@ -1385,6 +1399,20 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	color: white;
 }
 /*===========================----SHOP NOW PAGE----===========================*/
+#shop-banner {
+  background: url(../images/shop-banner.jpg);
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: 0 100%;
+  margin-bottom: 40px;
+	  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.29);
+	  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.29);
+	  -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.29);
+	  -ms-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.29);
+	  -o-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.29);
+}
+
 #featured-products {
 	width: 100%;
 	display: table;
@@ -1514,17 +1542,27 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 .product-picture-list {
 	float: left;
 	width: 36%;
-	background-color: red;
 	height: auto;
 	margin-right: 2%;
 	margin-left: 2%;
+	text-align:center;
+}
+.product-picture-list img{
+  max-height: 250px;
+  width: auto !important;
+  max-width: 100%;
+}
+.product-picture-list-mobile img {
+  max-height: 250px;
+  width: auto !important;
+  max-width: 100%;
 }
 
 .product-picture-list-mobile {
 	width: 100%;
-	background-color: red;
 	height: auto;
 	display: none;
+	text-align:center;
 }
 
 .product-info {
@@ -1569,7 +1607,18 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	padding: 10px;
 	border-bottom: 1px solid #323232;
 }
-
+#department select {
+    padding: 5px;
+    width: 100%;
+}
+#min-max {
+	padding: 10px;
+	border-bottom: 1px solid #323232;
+}
+#min-max input {
+    padding: 5px;
+    width: 100%;
+}
 .department-check {
 	float: left;
 	margin-right: 10px !important;
@@ -1670,6 +1719,34 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
   background-color: rgb(121, 20, 24);
   text-decoration: none;
   color: white;
+}
+#featured-products-area{
+	display:table;
+	width:100%;
+	padding-bottom:40px;
+}
+#main-featured-area-1 {
+    height: 250px;
+    float: left;
+    width: 32%;
+    background-color: red;
+    margin-right: 2%;
+	position:relative;
+}
+#main-featured-area-2 {
+    height: 250px;
+    float: left;
+    width: 32%;
+    background-color: red;
+    margin-right: 2%;
+	position:relative;
+}
+#main-featured-area-3 {
+    height: 250px;
+    float: left;
+    width: 32%;
+    background-color: red;
+	position:relative;
 }
 
 /*===========================----INTERNAL PAGE----===========================*/
@@ -1872,7 +1949,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 
 #careers-hover {
   position: relative;
-  background: url(../images/careers-hover-bg.jpg);
+  background: url(../images/careers-ps-hover.jpg);
   margin-bottom: 20px;
 	background-size:100% 100%;
 }
@@ -1907,6 +1984,10 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
   padding: 15px 20px;
   font-size: 18px;
   font-family: lithos;
+}
+#car-link:hover{
+	text-decoration:none;
+	background-color:#ff0000;
 }
 
 #hours-check- {
@@ -1951,10 +2032,14 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	color: #323232;
 	font-family: 'Open Sans',sans-serif;
 	max-width: 100%;
+	border:1px solid #323232;
 }
 
 .carousel-control {
 	width: 10%;
+}
+.gmnoprint img {
+    max-width: none !important; 
 }
 
 /*===========================----SIGN UP PAGE----===========================*/
@@ -2054,7 +2139,6 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	width: 25px;
 	height: 25px;
 }
-
 .view-cart-cta {
 	display: inline-block !important;
 	border: 0;
@@ -2064,10 +2148,26 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
-
-.view-cart-cta:hover {
+.view-cart-cta:hover{
 	background-color: #ff0000 !important;
 	text-decoration: none;
+	color:white !important;
+}
+
+#view-cart-cta {
+	display: inline-block !important;
+	border: 0;
+	background-color: rgb(143, 0, 5);
+	color: white !important;
+	font-family: lithosBlack;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+#cart-main li a#view-cart-cta:hover {
+	background-color: #ff0000 !important;
+	text-decoration: none;
+	color:white !important;
 }
 
 /*====MAIN CART====*/
@@ -2077,16 +2177,21 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	display: table;
 	width: 100%;
 }
-
+.in-cart-item-img-wrap{
+	  width: 220px;
+	  float: left;
+	  border: 1px solid darkgray;
+	  margin-right: 20px;
+	  clear: right;
+	  margin-bottom: 20px;
+	  padding: 20px;
+	  text-align: center;
+}
 .in-cart-item img {
-	float: left;
-	width: 220px;
-	height: auto;
-	border: 1px solid darkgray;
-	margin-right: 20px;
-	clear: right;
-	margin-bottom: 20px;
-	padding: 20px;
+  max-width: 100%;
+  width: auto;
+  max-height: 200px;
+  height: auto;
 }
 
 .in-cart-item h1 {
@@ -2100,6 +2205,12 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 
 .table-hover > tbody > tr:hover {
 	background-color: transparent !important;
+}
+#delete-item:hover{
+	background-color: rgba(143, 0, 5, 0.16) !important;
+}
+tr {
+  font-family: 'Open Sans';
 }
 /*===========================----ADMIN CP----===========================*/
 #admin-loading-space {
@@ -2374,6 +2485,9 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 #create-part-two {
 	display: none;
 }
+#create-part-two-store {
+	display: none;
+}
 
 #create-part-three {
 	display: none;
@@ -2491,4 +2605,9 @@ label {
 
 #create-submit-btn:hover {
 	background-color: #ff0000;
+}
+
+.bold-link{
+	font-weight: bold;
+  color: #333;
 }

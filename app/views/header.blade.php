@@ -57,6 +57,17 @@ date_default_timezone_set('America/New_York');
 </head>
 
 <body>
+	
+	<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDGK4G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDGK4G');</script>
+<!-- End Google Tag Manager -->
+	
 	<!--START header-->
 	<nav>
 		<div id="mobile-nav-wrap">
@@ -170,7 +181,7 @@ date_default_timezone_set('America/New_York');
 			</div>
 		</div>
 		<div id="mobile-banner">
-		<a href="http://aidevserver.co/projects/casels/public/"><img src={{ URL::asset( 'images/logo.png') }} alt="Casel's Logo" id="mobile-nav-logo" /></a>
+		<a href="http://aidevserver.co/projects/casels/public/"><img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="mobile-nav-logo" /></a>
 		</div>
 		<!--FORM ABOVE TEST SWAP WITH NAV-->
 
@@ -178,7 +189,7 @@ date_default_timezone_set('America/New_York');
 		<div id="main-nav">
 			<div class="nav-wrapper">
 				<a href="http://aidevserver.co/projects/casels/public/">
-					<img src={{ URL::asset( 'images/logo.png') }} alt="Casel's Logo" id="nav-logo" />
+					<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="nav-logo" />
 				</a>
 				<form method="POST" action="search" id="sub-nav-form">
 					<span id="all-cover">
@@ -201,7 +212,7 @@ date_default_timezone_set('America/New_York');
 						New Summer Hours!
 					</h1>
 					<a href="https://www.facebook.com/Casels?fref=ts">Click to Connect</a>-->
-					<a href="http://aidevserver.co/projects/casels/public/contact"><img src="images/summer-banner.jpg" id="header-news-annoucement"></a>
+					<a href="http://aidevserver.co/projects/casels/public/contact"><img src="http://aidevserver.co/projects/casels/public/images/summer-banner.jpg" id="header-news-annoucement"></a>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/login</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/register</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/cart</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/about</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/catering</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/delivery</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/careers</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/contact</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/shop</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/privacy-policy</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/terms-of-use</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/forgot</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/images/catering/catering_brochure_5_15_compd.pdf</loc>
+  <lastmod>2015-05-29T14:31:08+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/product/13</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/product/12</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/product/11</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/product/cart</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://aidevserver.co/projects/casels/public/product/.\</loc>
+  <changefreq>always</changefreq>
+</url>
+</urlset>

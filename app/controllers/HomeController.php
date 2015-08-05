@@ -31,139 +31,230 @@ class HomeController extends BaseController {
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
 		
-		return View::make('internal',['pageTitle' => 'About Us'],['pageContent' => '
-			<p><img class="aligncenter size-full wp-image-44" src="http://casels.com/wp/wp-content/uploads/about_us_store.jpg" alt="" width="100%" height="auto"></p>
-			<p>Since first opening our doors as a small grocery store in Atlantic City in 1929, Casel’s has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors. Today that tradition continues with the Seiden family. Howard, Randi, Rachel and Adam Seiden continue to bring that family atmosphere to Casel’s. They have owned it since 1982, upon purchasing it from the original owners, Abe and Herman Casel. While other businesses have come and gone, Casel’s continues to turn new visitors into life-long customers by combining the memories, tastes and smells of eras past with today’s most exciting products from the region and around the world.</p>
-			<p>Casel’s people make shopping a pleasure. You’d be hard pressed to find a more knowledgeable, passionate group of food fanatics anywhere. In fact, these folks get such a kick from Casel’s, it’s hard to get them to go home. Perhaps that’s why so many of our team members have been with Casel’s for 30 years or more. Like Jack, director of store operations, who started his Casel’s career as a part-time Stock Clerk in 1972. And George, our head baker, who has been creating Casel’s killer cinnamon buns from scratch for more than three decades.</p>
-			<p>Administrative Manager JoAnn joined the team more than 25 years ago in 1975 and has been ensuring smooth sailing ever since. And what began as after school jobs for Clem and Brian have ripened into careers as store manager and produce manager, respectively. These folks do what they love and love what they do. They also live to “talk food” so be sure and tell them all about that exciting new product or recipe you tried.</p>
-			<p>At Casel’s, we go beyond the basics to surprise and entice you. A couple of times each year, Jack and Clem scour the globe to bring you artisan products, specialty foods and ethnic brands you won’t find anywhere else. A popular stop for busy moms and professionals, our deli is chock full of pre-cooked meals, side-dishes and sensational salads. Our butcher offers the finest cuts of quality meats. Oceans of tasty treasures await your discovery in our seafood department. And our produce department is always brimming with farm-fresh fruits and vegetables of the season.</p>
-			<p style="text-align:center;font-family:lithos;font-size:18px;  margin: 40px 0 0 0;"><strong>CASEL’S VALUED SENIOR STAFF</strong></p>
-			<div style="display:table;width:100%;height:auto;padding:40px 0;">
-				<div id="top-1-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Howard Seiden</strong><br /><em>Owner</em><br>
+		return View::make('internal',['pageTitle' => 'About Us'],['pageContent' => "
+			<p><img class='aligncenter size-full wp-image-44' src='./images/about/about_us_store.jpg' alt='' width='100%' height='auto'></p>
+			<p>Since first opening our doors as a small grocery store in Atlantic City in 1929, Casel’s has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors. Today that tradition continues with the Seiden family- Howard, Randi, Rachel and Adam Seiden, who continue to bring that family atmosphere to Casel’s. They have owned the store since 1982, upon purchasing it from the original owners, Abe and Herman Casel. While other businesses have opened and closed, Casel’s continues to turn new visitors into life-long customers by combining the memories, tastes, and smells of eras past with today’s most exciting products from the region and around the world.</p>
+			<p>Casel’s staff makes shopping a pleasure! You’d be hard pressed to find a more knowledgeable, passionate group of food fanatics anywhere. In fact, these folks get such a joy from Casel’s, it’s hard to get them to head home. Perhaps that’s why so many of our team members have been with Casel’s for 30 years or more, like Jack, Director of Store Operations, who started his Casel’s career as a part-time Stock Clerk in 1972. And George, our Head Baker, who has been creating Casel’s killer cinnamon buns from scratch for over three decades.</p>
+			
+			<p>Administrative Manager JoAnn joined the team more than 40 years ago in 1975 and has been ensuring smooth sailing ever since. And what began as after school jobs for Clem and Brian, have ripened into careers as Store Manager and Assistant Manager, respectively. Our team does what they love and love what they do. They also live to “talk food” so be sure and tell them all about that exciting new product or recipe you tried.</p>
+			
+			<p>At Casel’s, we go beyond the basics to surprise and entice you. A few times each year, Jack and Clem attend food shows to bring you artisan products, specialty foods, and ethnic brands you won’t find anywhere else. A popular stop for busy moms and professionals, our deli is full of pre-cooked meals, side-dishes, and sensational salads. Our butcher offers the finest cuts of quality meats, oceans of tasty treasures await your discovery in our seafood department, and our produce department is always brimming with farm-fresh fruits and vegetables each season.</p>
+			<p style='text-align:center;font-family:lithos;font-size:18px;  margin: 40px 0 0 0;'><strong>CASEL’S VALUED SENIOR STAFF</strong></p>
+			<div style='display:table;width:100%;height:auto;padding:40px 0;'>
+				<div id='top-1-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Howard & Randi Seiden</strong><br />Owners<br>
 				</div>
-				<div id="top-2-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Jack Ewell</strong><br /><em>Director of Store Operations</em><br>
+				<div id='top-2-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Jack Ewell</strong><br />Director of Store Operations<br>
 				</div>
-				<div id="top-3-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>JoAnn Sedlock</strong><br /><em>Administrative Store Manager</em><br>
+				<div id='top-3-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>JoAnn Sedlock</strong><br />Administrative Store Manager<br>
 				</div>
-				<div id="top-4-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Clemente Ortiz</strong><br /><em>Operating Store Manager</em><br>
+				<div id='top-4-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Clemente Ortiz</strong><br />Operating Store Manager<br>
 				</div>
-				<div id="bot-1-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Phil Cappuccio</strong><br /><em>Asst.Store Manager, Grocery Manager</em><br>
+				<div id='bot-1-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Phil Cappuccio</strong><br />Assistant Store Manager<br>
 				</div>
-				<div id="bot-2-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Brian Ungerer</strong><br /><em>Asst. Store Manager, Produce and Dairy Manager</em><br>
+				<div id='bot-2-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Brian Ungerer</strong><br />Assistant Store Manager<br>
 				</div>
-				<div id="bot-3-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Liliana Luna</strong><br /><em>Front End Manager</em><br>
+				<div id='bot-3-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Liliana Luna</strong><br />Front End Manager<br>
 				</div>
-				<div id="bot-4-emp" class="emp-pic-prof">
-					<!--<img src="./images/sidebar.jpg" class="emp-headshot"><br />-->
-					<strong>Robert O’Brien</strong><br /><em>Meat Manager</em></p>
+				<div id='bot-4-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Robert O’Brien</strong><br />Meat Manager</p>
+				</div>
+				<div id='bot-1-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Jessica Velasquez</strong><br />Deli & Catering Manager<br>
+				</div>
+				<div id='bot-2-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Scott Adams</strong><br />Dairy Manager<br>
+				</div>
+				<div id='bot-3-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Stacey Youhas</strong><br />Bakery Manager<br>
+				</div>
+				<div id='bot-4-emp' class='emp-pic-prof'>
+					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
+					<strong>Joan Lucas</strong><br />Person Shopper/Gift Basket Co-ordinator</p>
 				</div>
 			</div>
-			<header id="myCarousel" class="carousel slide" style="height: 550px;margin:20px 0;padding: 10px;background-color: #EDE9E1;box-shadow: 0 0 3px rgba(0, 0, 0, 0.36);">
+			<header id='myCarousel' class='carousel slide' style='height: 550px;margin:20px 0;padding: 10px;background-color: #EDE9E1;box-shadow: 0 0 3px rgba(0, 0, 0, 0.36);'>
 					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-						<li data-target="#myCarousel" data-slide-to="3"></li>
-						<li data-target="#myCarousel" data-slide-to="4"></li>
-						<li data-target="#myCarousel" data-slide-to="5"></li>
-						<li data-target="#myCarousel" data-slide-to="6"></li>
-						<li data-target="#myCarousel" data-slide-to="7"></li>
-						<li data-target="#myCarousel" data-slide-to="8"></li>
-						<li data-target="#myCarousel" data-slide-to="9"></li>
+					<ol class='carousel-indicators'>
+						<li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+						<li data-target='#myCarousel' data-slide-to='1'></li>
+						<li data-target='#myCarousel' data-slide-to='2'></li>
+						<li data-target='#myCarousel' data-slide-to='3'></li>
+						<li data-target='#myCarousel' data-slide-to='4'></li>
+						<li data-target='#myCarousel' data-slide-to='5'></li>
+						<li data-target='#myCarousel' data-slide-to='6'></li>
+						<li data-target='#myCarousel' data-slide-to='7'></li>
+						<li data-target='#myCarousel' data-slide-to='8'></li>
+						<li data-target='#myCarousel' data-slide-to='9'></li>
+						<li data-target='#myCarousel' data-slide-to='10'></li>
+						<li data-target='#myCarousel' data-slide-to='11'></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<div class="fill" style="background-image:url(./images/about/about-1.jpg);background-position:100%;">
-								<div class="wrapper">
-									
+					<div class='carousel-inner'>
+						<div class='item active'>
+							<div class='fill' style='background-image:url(./images/about/about-14.jpg);background-position:100%;'>
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Our Meat Department offers a wide variety of choices. Beef, pork, chicken, fresh fish, and Empire products are part of our offerings. Try our Bell & Evans Chicken, you’ll taste the difference. Try our Sirloin Burgers for your grilling. One taste and you will never try another.
+									  </p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-2.jpg);background-position:100%;">
-								<div class="wrapper">
-									
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-3.jpg);background-position:100%;'>
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									 Be it chips, snacks, salsa, salad dressings, mustards, BBQ sauces or hundreds of other offerings. Casel’s has it!
+									  </p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-3.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/bakery-3.jpg);'></div>
+							
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Casel's makes our breakfast danish from scratch, seven days per week. Famous for our delicious treats, our Sticky Buns are a must try. We have a variety of desserts that should satisfy any craving.
+									  </p>
+									</div>
+								</div>
+							
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-4.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-5.jpg);'></div>
+							
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Worn out from the sun? Need a drink to give you that much needed natural energy boost this summer? Get your fruit servings 'on the go' and try Casels wide selection of fruit juices. 
+									  </p>
+									</div>
+								</div>
+							
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-5.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-12.jpg);'></div>
+							
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Pre-packaged and ready to go, we have a full line of nut mixes to satisfy the most health-conscious customers.
+									  </p>
+									</div>
+								</div>
+							
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-6.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-1.jpg);'></div>
+							
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Stonewall Kitchen, a gourmet line with dozens of items rarely found all in one place. We have every sauce, jam, dressing, aioli, cracker, chip, baking mix, pancake mix, hand lotion and dish soap available. Check us out.
+									  </p>
+									</div>
+								</div>
+							
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-7.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-8.jpg);'></div>
+							
+								<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Crab Cakes, made fresh daily in our Meat Department, are the best on the island. Once you try one, you won't go anywhere else.
+									  </p>
+									</div>
+								</div>
+
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-8.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-20.jpg);'></div>
+							<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  Our Produce Department gets deliveries seven days per week. Jersey Fresh items from farm to Aisle One as soon as they become available. Our organic section keeps growing to meet your needs.
+									  </p>
+									</div>
+								</div>
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-9.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-10.jpg);'></div>
+							<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									   Need something iconic for your next thank you? Casels gift baskets are both delicious and entertaining. Johnsons Popcorn, Jelly Beans, and Beach Toys are just a few of your choices.
+									  </p>
+									</div>
+								</div>
 						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url(./images/about/about-10.jpg);"></div>
-							<div class="carousel-caption">
-								
-							</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-16.jpg);'></div>
+							<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									  A full line of Gluten Free items throughout our store. B Free Bread is one item that will satisfy your bread requests.
+									  </p>
+									</div>
+								</div>
+						</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-17.jpg);'></div>
+							<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									   Buy our recyclable bag and help the environment. When you shop, we credit you 5¢ for each bag you use instead of paper or plastic.
+									  </p>
+									</div>
+								</div>
+						</div>
+						<div class='item'>
+							<div class='fill' style='background-image:url(./images/about/about-18.jpg);'></div>
+							<div class='wrapper'>
+									<div class='carousel-caption'>
+									  <p>
+									 Create your own salad at Casel's with over twenty offerings and eight salad dressings.
+									  </p>
+									</div>
+								</div>
 						</div>
 					</div>
 
 					<!-- Controls -->
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-						<span class="icon-prev"></span>
+					<a class='left carousel-control' href='#myCarousel' data-slide='prev'>
+						<span class='icon-prev'></span>
 					</a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next">
-						<span class="icon-next"></span>
+					<a class='right carousel-control' href='#myCarousel' data-slide='next'>
+						<span class='icon-next'></span>
 					</a>
 				</header>
+				
+
 			
-			
-			']);
+			"]);
 	}
 	public function getCatering()
 	{
@@ -173,16 +264,19 @@ class HomeController extends BaseController {
 		$final_time = $hrs;
 		
 		return View::make('internal',['pageTitle' => 'Catering'],['pageContent' => '
-			<p style="margin-bottom:20px">Featuring fresh homemade platters, dinners, fruit and gift baskets for all occasions – as well as our sandwich, fish, party, dessert and bakery trays – our famous Casel’s Catering can’t be beat! If you want something a little different, we will always try to accommodate you. Our Catering and Kitchen staff are always available to help you with your needs. For pricing and information on all our catering call (609) 823-2741.</p>
-			<center><a href="http://www.casels.com/PDFs/catering_brochure.pdf" target="_blank" id="view-brochure">View Brochure</a></center>
+			<p style="margin-bottom:20px">
+			Our trays are the best in South Jersey. Our staff can accommodate any request. For the freshest sandwich, meat and smoked fish trays for all occasions…our catering department is at your service. Dessert trays, Fruit trays, Vegetable trays among others available. Call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.		
+			</p>
+			<center><a href="./images/catering/catering_brochure_new.pdf" target="_blank" id="view-brochure">View Brochure</a></center>
 			
 			<p></p>
 			
 			<div id="page-main-title" style="margin: 20px 0;"></div>
 			<div id="catering-selector">
 	<!--appitizer platters-->				
-				<h1 id="appitizers-sel" class="catering-title-selector">Appetizers <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
+				<h1 id="appitizers-sel" class="catering-title-selector">Appetizers & Desserts<span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="appitizers-dropdown">
+					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
 						<div class="catering-sub-wrap-top">
 							<div class="cat-left">
 								<div class="catering-img-center">
@@ -223,18 +317,37 @@ class HomeController extends BaseController {
 								<h1 class="catering-title">Wings Tray</h1>
 								<p>These wings come in a variety of flavors Buffalo, Barbecue, Mild or Zesty. Served with a blue cheese dressing, celery and extra sauce.<br>Serves 8 -10 people<p>
 							</div>
+						<div class="catering-sub-wrap" style="margin:0;">
+							<div class="cat-left" >
+								<div class="catering-img-center">
+									<img src="./images/catering/fruit.jpg">
+								</div>
+								<h1 class="catering-title">Cut Fruit Platter</h1>
+								<p>Delicious fresh fruit picked that day from our own fruit department. If it’s not fresh you won’t see it on your platter.</p>
+							</div>
+							<div class="cat-right" >
+								<div class="catering-img-center">
+									<img src="./images/catering/desert.jpg">
+								</div>
+								<h1 class="catering-title">Dessert Tray</h1>
+								<p>Our delicious miniature Danish and Casel’s Classic Cinnamon Buns are baked from scratch. Order a tray to fit your needs.</p>
+							</div>
+						</div>
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
+	
+	
 	<!--Party platters-->			
 				<h1 id="party-sel" class="catering-title-selector">Party Platters <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="party-dropdown">
+					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
 						<div class="catering-sub-wrap-top">
 							<div class="cat-left" >
 								<div class="catering-img-center">
 									<img src="./images/catering/sandwhich.jpg">
 								</div>
-								<h1 class="catering-title">Sandwhich Platter</h1>
+								<h1 class="catering-title">Sandwich Platter</h1>
 								<p>All of our meats are cooked fresh in our kitchen daily. Tell us your choices of meats and cheeses, the number of people that you would like to serve and we do the rest. Our trays include potato salad, pickles and olives. On the side we also supply cole slaw, russian dressing, mayonnaise and mustard. When you get the tray home, all you have to do is unwrap it.</p>
 							</div>
 							<div class="cat-right" >
@@ -256,11 +369,13 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
+	
+	
 	<!--Dinners-->	
 				<h1 id="dinners-sel"  class="catering-title-selector">Dinners <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 				
 					<div id="dinners-dropdown">
-						<p>Talk to our kitchen staff and let us help you with your menu. Here are just three of the possibilities …</p>
+						<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager and let us help you with your menu. Here are just four of the possibilities...</p>
 						<div class="catering-sub-wrap-top">
 							<div class="cat-left" >
 								<div class="catering-img-center">
@@ -285,12 +400,22 @@ class HomeController extends BaseController {
 								<h1 class="catering-title">Pork Roast</h1>
 								<p></p>
 							</div>
+							<div class="cat-right" >
+								<div class="catering-img-center">
+									<img src="./images/catering/turkey.jpg">
+								</div>
+								<h1 class="catering-title">Turkey Dinner</h1>
+								<p></p>
+							</div>
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
+	
+	
 	<!--fruits and baskets-->				
-				<h1 id="baskets-sel"  class="catering-title-selector">Fruits & Baskets <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
+				<h1 id="baskets-sel"  class="catering-title-selector">Gift & Fruit Baskets<span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="baskets-dropdown">
+					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
 						<div class="catering-sub-wrap-top">
 							<div class="cat-left" >
 								<div class="catering-img-center">
@@ -318,7 +443,9 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
-	<!--Desserts platters-->
+	
+	
+	<!--Desserts platters
 				<h1 id="desserts-sel" class="catering-title-selector">Desserts <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="desserts-dropdown">
 						<div class="catering-sub-wrap">
@@ -338,7 +465,7 @@ class HomeController extends BaseController {
 							</div>
 						</div>
 					</div>
-				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
+				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>-->
 			</div>
 
  
@@ -355,16 +482,18 @@ class HomeController extends BaseController {
 		<h3 style="font-family: lithosBlack;">Do your grocery shopping from home!</h3>
 		<p>Delivery to your door is available at Casels. Order by noon for afternoon delivery, Monday - Friday. Just <strong>$12.50</strong>.</p>
 		
-		<p>To place your order use the form below, email your order to <a href="mailto:joann@casels.com">joann@casels.com</a>, or you can call your order in <a href="tel:16098231805">609-823-1805</a>.</p>
+		<p>To place your order please call <a href="tel:16098231805" class="bold-link">609-823-1805</a> and ask for our personal shopper, Joan Lucas. Or you can fax your order to <a href="tel:16098231805" class="bold-link">609-823-0894</a>. Also, you can email your order to <a href="mailto:JoAnn@casels.com." class="bold-link">JoAnn@casel’s.com.</a></p>
 		
-		<p>After placing your order, please call Joan at <a href="tel:16098230894>">609-823-0894</a> to confirm your order and delivery.</p>
+		<p>If you fax or email, please call JoAnn Sedlock, our Administrative Store Manager, to let her know you placed an order. There is no other business that takes the time and care in making sure the items you ordered are fresh and correctly picked. Casel’s personal service is something we take pride in.</p>
 		
 		<p>Casels has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors.</p>
 		
 		<div id="page-main-title">
 		</div>
 		
-		<form method="POST" action="#">
+		<img src="./images/Casels-129.jpg" alt="Casels Home Delivery" />
+		
+		<!--<form method="POST" action="#">
 			<div class="left-form-part">
 				<p>First Name*:</p>
 				<input type="text" tabindex="2" required name="first-name" id="first-name">
@@ -391,7 +520,9 @@ class HomeController extends BaseController {
 					<input type="submit" tabindex="10" value="submit" id="apply-submit">
 				</div>
 			</div>
-		</form>']);
+		</form>-->
+		
+		']);
 	}
 	public function getCareers()
 	{
@@ -403,19 +534,12 @@ class HomeController extends BaseController {
 		return View::make('internal',['pageTitle' => 'Careers'],['pageContent' => '
 			<p>
 			<div id="careers-hover">
-				<img src="./images/careers.jpg" id="chover-hide">
+				<img src="./images/careers-ps.jpg" id="chover-hide">
 				<a href="http://casels.com/PDFs/emp_app_form.pdf" id="chover-link">Apply Today</a>
 			</div>
 			
 			From time to time, <strong>Casel’s</strong> has opportunities for hard-working, dependable, service-oriented individuals to serve our customers.<br>
-			<p>We are currently looking to fill the following positions:</p>
-			<ul style="list-style-type: circle;margin: 0 0 0 30px;">
-
-				<li>Deli Clerk</li>
-				<li>Dairy</li>
-				<li>Grocery</li>
-				<li>Produce</li>
-			</ul>
+			<p>We are currently looking to fill positions.</p>
 			<br>Please feel free to fill out an application for employment, and we will contact you or keep your name on file for consideration. Click on the button below to download and print the application; you can fill it out and bring (or mail) it to our store.</p>
 			<p style="text-align:center;margin-top:20px" ><a href="http://casels.com/PDFs/emp_app_form.pdf" id="car-link">Application for Employment <i class="fa fa-external-link"></i></a></p>
 			<p>&nbsp;</p>

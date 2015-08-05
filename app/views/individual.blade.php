@@ -9,15 +9,7 @@
 				</div>
 				<div id="product-main-info">
 					<h1 id="main-info-product-title">{{ $product ->title }}</h1>
-					<div class="ratings">
-						<p>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star-empty"></span>
-							<span class="glyphicon glyphicon-star-empty"></span>
-						</p>
-					</div>
+					
 					<div id="product-picture-mobile">
 						<img style="width: 100%; height: auto;" src="{{ $product ->picture_id }}" />
 					</div>
@@ -55,7 +47,7 @@
 						@if($getitemstatusresponse->Item->ListingStatus == 'Active') 
 							@if($product ->inventory == 1)
 								<div id="delivery-estimation">
-									<p><span>Estimated Delivery:</span> March 31</p>
+									<p><span>Estimated Delivery:</span> 3-5 Business Day's</p>
 								{{ Form::open(array('name' => 'addToCart', 'url' => '/cart/add/' . $id, 'method' => 'POST')) }}
 									<input type="submit" value="Add To Cart" id="buy-now" />
 								{{ Form::close() }}								
@@ -72,12 +64,12 @@
 						
 						@elseif($product ->inventory == 1)
 								<div id="delivery-estimation">
-									<p><span>Estimated Delivery:</span> March 31</p>
+									<p><span>Estimated Delivery:</span> 3-5 Business Day's</p>
 									<input type="submit" value="Buy Now" id="buy-now">
 								</div>
 						@else
 							<div id="delivery-estimation">
-								<p><span>Estimated Delivery:</span> March 31</p>
+								<p><span>Estimated Delivery:</span> 3-5 Business Day's</p>
 							</div>			
 							<div id="quantity-cart" style="margin-top:20px;">
 								{{ Form::open(array('name' => 'addToCart', 'url' => '/cart/add/' . $id, 'method' => 'POST')) }}
@@ -93,9 +85,7 @@
 			<div id="tabbed-section">
 				<ul id="tabs">
 					<li class="tabActive" id="lblDescription">Description</li>
-					<li id="lblDetails">Details</li>
 					<li id="lblReturns">Returns</li>
-					<li id="lblReviews">Reviews</li>
 				</ul>
 				<div id="description-text">
 					<?php
@@ -109,22 +99,27 @@
 
 				</div>
 				<div id="returns-text">
-					Nulla consectetur quis tortor nec euismod. Curabitur tempus sagittis auctor. Sed ultrices, neque at porta cursus, sem nibh scelerisque ex, ac accumsan diam lacus vitae ante. Phasellus imperdiet in urna et tincidunt. Nam ullamcorper nulla quis aliquet
-					bibendum. Duis pretium elit eget felis pharetra, nec placerat eros cursus. Vivamus accumsan molestie iaculis.
+					<h1>
+						Return policy	
+					</h1>
+					<ul style="margin-left: 30px;">
+						<li>After receiving the item, contact seller <b>within 30 days</b> for your money back.</li>
+						<li>Buyer pays return shipping</li>
+					</ul>
 				</div>
-				<div id="reviews-text">
+				<!--<div id="reviews-text">
 					Nulla consectetur quis tortor nec euismod. Curabitur tempus sagittis auctor. Sed ultrices, neque at porta cursus, sem nibh scelerisque ex, ac accumsan diam lacus vitae ante. Phasellus imperdiet in urna et tincidunt. Nam ullamcorper nulla quis aliquet
 					bibendum. Duis pretium elit eget felis pharetra, nec placerat eros cursus. Vivamus accumsan molestie iaculis.Nulla consectetur quis tortor nec euismod. Curabitur tempus sagittis auctor. Sed ultrices, neque at porta cursus, sem nibh scelerisque ex,
 					ac accumsan diam lacus vitae ante. Phasellus imperdiet in urna et tincidunt. Nam ullamcorper nulla quis aliquet bibendum. Duis pretium elit eget felis pharetra, nec placerat eros cursus. Vivamus accumsan molestie iaculis.Nulla consectetur quis tortor
 					nec euismod. Curabitur tempus sagittis auctor. Sed ultrices, neque at porta cursus, sem nibh scelerisque ex, ac accumsan diam lacus vitae ante. Phasellus imperdiet in urna et tincidunt. Nam ullamcorper nulla quis aliquet bibendum. Duis pretium elit
 					eget felis pharetra, nec placerat eros cursus. Vivamus accumsan molestie iaculis.
-				</div>
+				</div>-->
 			</div>
 		</div>
 
 
 		<div id="side-bar">
-			<img src="../images/sidebar.jpg" id="sidebar-img">
+			<img src="" id="sidebar-img-ind">
 			<h1 id="sidebar-title">Apply to Become a Casel's Preferred Customer</h1>
 			<a href="http://aidevserver.co/projects/casels/public/get-card" id="sidebar-cta">Apply Now</a>
 		</div>

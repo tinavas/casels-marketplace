@@ -12,26 +12,35 @@
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+						<li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<div class="fill" style="background-image:url('./images/shop-slider-2.jpg');">
+							<div class="fill" style="background-image:url('./images/shop-3.jpg');background-position:100%;">
 								<div class="wrapper">
-									<h1 class="carousel-main">Check out this <br />Feature Product</h1>
-									<p class="carousel-sub">The Best Quality</p>
-									<p><a class="carousel-btn" href="#">Learn more</a></p>
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Storage Canisters</h1>
+									<p class="shop-slider-sub">Gracious Goods For The Home</p>
+									<p><a class="shop-blue-slider-btn" href="http://aidevserver.co/projects/casels/public/product/10">Learn more</a></p> -->
 								</div>
 							</div>
 						</div>
 						<div class="item">
-							<div class="fill" style="background-image:url('./images/shop-slider-1.jpg');">
+							<div class="fill" style="background-image:url('./images/shop-banner-1.jpg');background-position:100%;">
 								<div class="wrapper">
-									<h1 class="carousel-main">Another Slider</h1>
-									<p class="carousel-sub">Hand Selected for the Best Quality</p>
-									<p><a class="carousel-btn" href="#">Learn more</a></p>
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
+									<p class="shop-slider-sub">Gracious Goods For The Home</p>
+									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="fill" style="background-image:url('./images/shop-banner-2.jpg');background-position:100%;">
+								<div class="wrapper">
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
+									<p class="shop-slider-sub">Gracious Goods For The Home</p>
+									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
 								</div>
 							</div>
 						</div>

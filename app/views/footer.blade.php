@@ -2,7 +2,7 @@
 <footer>
 	<div class="wrapper">
 		<div id="footer-1">
-			<a href=".\"><img src={{ URL::asset('images/logo.png') }} alt="Casel's Logo" id="foot-logo"/></a>
+			<a href=".\"><img src={{ URL::asset('images/logo-new.png') }} alt="Casel's Logo" id="foot-logo"/></a>
 		</div>
 		<div id="footer-2">
 			<h1 class="footer-header">Store Hours</h1>
@@ -38,7 +38,7 @@
 					&copy;2015 Casel's Marketplace | {{ HTML::link('privacy-policy', 'Privacy Policy', array('style' => 'color:#323232;')) }}  | {{ HTML::link('terms-of-use', 'Terms of Use', array('style' => 'color:#323232;')) }}
 				</p>
 				<a id="argyle" target="blank" style="color:#323232;" href="http://www.argyleinteractive.com">
-					<img src="http://aidevserver.co/projects/casels/public/images/diamond-small.png">  Developed by Argyle Interactive  <img src="http://aidevserver.co/projects/casels/public/images/diamond-small.png">
+					Made With <img src="http://aidevserver.co/projects/casels/public/images/red-love.png" height="25px" width="auto">
 				</a>
 			</center>
 		</div>

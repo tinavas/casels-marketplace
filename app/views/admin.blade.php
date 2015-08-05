@@ -30,7 +30,7 @@
 	<div id="new-list-cta-wrap">
 		{{ HTML::link('#', 'Create New Listing', array('class' => 'btn btn-success', 'style' => 'float: right;', 'id' => 'new-listing-cta-head')) }}
 	</div>
-	
+
 </div>
 <div id="admin-side-nav">
 	<ul>
@@ -58,16 +58,16 @@
 	<div id="order-management">
 		<div id="page-main-title">
 			<h1 class="admin-tb-title">Orders</h1>
-				<form class="form-inline">
+			<form class="form-inline">
 				<div class="form-group">
 					<input type="text" class="form-control" id="exampleInputName2" placeholder="Search Requests...">
 				</div>
 				<button type="submit" class="btn btn-default">Search</button>
 			</form>
 		</div>
-				@foreach(Orders::orderBy('created_at', 'DSC')->get() as $order)
-				<!--START REDESING FOR ORDERS-->
-				<div class="individual-inventory-wrap">
+		@foreach(Orders::orderBy('created_at', 'DSC')->get() as $order)
+		<!--START REDESING FOR ORDERS-->
+		<div class="individual-inventory-wrap">
 			<div class="user-title-top-wrap">
 				<h1>{{ $order ->first_name }} {{ $order ->last_name }}</span></h1>
 				<a href="/products/remove/id-here/auth-key" class="btn btn-danger desktop-ban" style="float:right;margin-top:10px;">Mark Shipped</a>
@@ -77,11 +77,11 @@
 			<div class="items-bottom-wrap bg-{{ $order ->id }}">
 				<div class="items-under">
 					<h2 class="user-card-under-info"><span class="bold">Order ID #:</span> {{ $order ->id }}</h2>
-				<h2 class="user-card-under-info"><span class="bold">Address:</span> {{ $order ->address }} {{$order ->address_2}}</h2>
-				<h2 class="user-card-under-info"><span class="bold">City:</span> {{ $order ->city }}</h2>
-				<h2 class="user-card-under-info"><span class="bold">State:</span> {{ $order ->state }}</h2>
-				<h2 class="user-card-under-info"><span class="bold">Zip:</span> {{ $order ->zip }}</h2>
-				<h2 class="user-card-under-info"><span class="bold">Phone:</span> {{ $order ->phone }}</h2>
+					<h2 class="user-card-under-info"><span class="bold">Address:</span> {{ $order ->address }} {{$order ->address_2}}</h2>
+					<h2 class="user-card-under-info"><span class="bold">City:</span> {{ $order ->city }}</h2>
+					<h2 class="user-card-under-info"><span class="bold">State:</span> {{ $order ->state }}</h2>
+					<h2 class="user-card-under-info"><span class="bold">Zip:</span> {{ $order ->zip }}</h2>
+					<h2 class="user-card-under-info"><span class="bold">Phone:</span> {{ $order ->phone }}</h2>
 				</div>
 				<div class="drop-clicker" id="{{ $order ->id }}">
 					<i class="fa fa-bars"></i>
@@ -99,9 +99,9 @@
 				<div style="text-align:center;">
 					<a href="mailto:{{ $order ->payer_email }}" class="btn btn-info" style="margin-top:5px;">Email Buyer</a>
 				</div>
-			</div>	
+			</div>
 		</div>
-			
+
 		@endforeach
 
 	</div>
@@ -109,7 +109,7 @@
 	<div id="current-inventory">
 		<div id="page-main-title">
 			<h1 class="admin-tb-title">Current Inventory</h1>
-				<form class="form-inline">
+			<form class="form-inline">
 				<div class="form-group">
 					<input type="text" class="form-control" id="exampleInputName2" placeholder="Search Requests...">
 				</div>
@@ -222,15 +222,15 @@
 
 		<div id="create-timer">
 			<div class="progress" style="height:20px;">
-			  	<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%" id="prog-1" >
+				<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%" id="prog-1">
 					<span class="sr-only">33% Complete</span>
-			  	</div>
+				</div>
 				<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%" id="prog-2">
 					<span class="sr-only">33% Complete</span>
-			 	</div>
-				<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%" id="prog-3" >
+				</div>
+				<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33.333%" id="prog-3">
 					<span class="sr-only">33% Complete</span>
-			  </div>
+				</div>
 			</div>
 		</div>
 		<div class="new_product" style="width: 60%;">
@@ -253,13 +253,18 @@
 				<div class="form-group">
 					{{ Form::label('label_picture', 'Upload a Picture') }}
 					<div style="position:relative;"><span id="browse-over">Browse</span>{{ Form::file('image', array('id' => 'image-uploader')) }}</div>
-					
+
 				</div>
 				<p id="picture-name"></p>
-				
+				<div class="form-group">
+					<label>Upload to eBay as well?</label>
+					<select class="form-control" id="on_ebay" name="on_ebay">
+						<option value="default" disabled="disabled">Select one--</option>
+						<option>No</option>
+						<option>Yes</option>
+					</select>
+				</div>
 			</div>
-
-
 
 			<div id="create-part-two">
 
@@ -293,7 +298,33 @@
 						<option>2000</option>
 					</select>
 				</div>
-				
+
+				<div class="form-group">
+					{{ Form::text('length','', array('class' => 'form-control', 'placeholder' => 'Product length', 'id' => 'item-length')) }}
+				</div>
+				<div class="form-group">
+					{{ Form::text('width','', array('class' => 'form-control', 'placeholder' => 'Product width', 'id' => 'item-width')) }}
+				</div>
+				<div class="form-group">
+					{{ Form::text('height','', array('class' => 'form-control', 'placeholder' => 'Product height', 'id' => 'item-height')) }}
+				</div>
+			</div>
+
+			<div id="create-part-two-store">
+
+				<div class="form-group">
+					{{ Form::label('label_paypal', 'PayPal Email Address') }} {{ Form::email('paypal', 'PayPal@Email.com', array('class' => 'form-control')) }}
+				</div>
+				<div class="form-group">
+					{{ Form::label('label_condition', 'Item Condition') }}
+					<select class="form-control" name="condition" id="item-condition-store">
+						<option>Select</option>
+						<option>New</option>
+						<option>Used</option>
+						<option>Refurbished</option>
+					</select>
+				</div>
+
 				<div class="form-group">
 					{{ Form::text('length','', array('class' => 'form-control', 'placeholder' => 'Product length', 'id' => 'item-length')) }}
 				</div>
@@ -314,11 +345,11 @@
 						<option>3</option>
 						<option>4</option>
 						<option>5</option>
-						<option>6</option>						
-						<option>7</option>						
-						<option>8</option>						
-						<option>9</option>						
-						<option>10</option>						
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
 					</select>
 				</div>
 
@@ -330,15 +361,33 @@
 						<option>3</option>
 						<option>4</option>
 						<option>5</option>
-						<option>6</option>						
-						<option>7</option>						
-						<option>8</option>						
-						<option>9</option>						
-						<option>10</option>	
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
 					</select>
 				</div>
 			</div>
-
+			
+			<div id="create-part-three-store" style="display:none;">
+				<div class="form-group">
+					{{ Form::label('label_condition', 'Quantity for Store') }}
+					<select class="form-control" name="q_store" id="store-item-qty">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
+				</div>
+			</div>
+			 
 			<div id="create-buttons-part">
 				<div id="create-next-prev">
 					<div id="create-submit">
@@ -353,7 +402,7 @@
 						Previous
 					</h1>
 				</div>
-				
+
 			</div>
 			{{ Form::close() }}
 		</div>

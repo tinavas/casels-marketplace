@@ -7,31 +7,40 @@
 					</div>
 				</div>
 
-				<header id="myCarousel" class="carousel slide" style="margin-bottom:40px;">
+				<header id="myCarousel" class="carousel slide shophome" style="margin-bottom:40px;">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+						<li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<div class="fill" style="background-image:url('./images/main-banner.jpg');background-position:100%;">
+							<div class="fill" style="background-image:url('./images/shop-3.jpg');background-position:100%;">
 								<div class="wrapper">
-									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Storage Canisters</h1>
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Storage Canisters</h1>
 									<p class="shop-slider-sub">Gracious Goods For The Home</p>
-									<p><a class="shop-blue-slider-btn" href="http://aidevserver.co/projects/casels/public/product/10">Learn more</a></p>
+									<p><a class="shop-blue-slider-btn" href="http://aidevserver.co/projects/casels/public/product/10">Learn more</a></p> -->
 								</div>
 							</div>
 						</div>
 						<div class="item">
-							<div class="fill" style="background-image:url('./images/second-banner.jpg');background-position:100%;">
+							<div class="fill" style="background-image:url('./images/shop-banner-1.jpg');background-position:100%;">
 								<div class="wrapper">
-									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
 									<p class="shop-slider-sub">Gracious Goods For The Home</p>
-									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p>
+									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="fill" style="background-image:url('./images/shop-banner-2.jpg');background-position:100%;">
+								<div class="wrapper">
+<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
+									<p class="shop-slider-sub">Gracious Goods For The Home</p>
+									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
 								</div>
 							</div>
 						</div>
@@ -54,6 +63,24 @@
 
 				<div id="content">
 					<div class="wrapper">
+						<div id="featured-products-area">
+							<a href="#" class="shop-feat-cta">
+								<div id="main-featured-area-1">
+
+								</div>
+							</a>
+							<a href="#" class="shop-feat-cta">
+								<div id="main-featured-area-2">
+
+								</div>
+							</a>
+							<a href="#" class="shop-feat-cta">
+								<div id="main-featured-area-3">
+
+								</div>
+							</a>
+						</div>
+
 						<form method="post" action="search" id="specific-search-refine">
 							<div id="refine-search">
 								<div id="refine-search-input">
@@ -75,13 +102,23 @@
 											</select>
 										</div>
 									</div>
-									<div id="price-selector">
+									<div id="min-max">
+										<p style="font-weight:bold;">
+											Min Price:
+										</p>
+										<input name="minprice">
+										<p style="font-weight:bold;">
+											Max Price:
+										</p>
+										<input name="maxprice">
+									</div>
+									<!--<div id="price-selector">
 										<p>
 											<label for="amount">Price range:</label>
 											<input type="text" id="amount" name="amount" readonly style="border:0;">
 										</p>
 										<div id="slider-range"></div>
-									</div>
+									</div>-->
 									<div id="submit-refine">
 										<input type="submit" name="submit" value="submit">
 									</div>
@@ -98,13 +135,13 @@
 								<div class="product-info">
 									<h3 class="product-name">{{ $product ->title }}</h3>
 									<div class="product-rating">
-										<p>
+<!-- 										<p>
 		                                    <span class="glyphicon glyphicon-star"></span>
 		                                    <span class="glyphicon glyphicon-star"></span>
 		                                    <span class="glyphicon glyphicon-star"></span>
 		                                    <span class="glyphicon glyphicon-star-empty"></span>
 		                                    <span class="glyphicon glyphicon-star-empty"></span>
-		                                </p>
+		                                </p> -->
 										<strong>${{ $product ->price }}</strong>
                   				</div>
 									<div class="product-picture-list-mobile">

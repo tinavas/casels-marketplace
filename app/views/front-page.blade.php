@@ -1,10 +1,10 @@
 @include('header')
 <script>
 	function parallax() {
-		var prlx_lyr_1 = document.getElementById('main-picture-home');
-		prlx_lyr_1.style.top = (110+(window.pageYOffset / 7.5)) + 'px';
+		//var prlx_lyr_1 = document.getElementById('main-picture-home');
+		//prlx_lyr_1.style.top = (110-(window.pageYOffset / 7.5)) + 'px';
 		var prlx_lyr_2 = document.getElementById('home-text');
-		prlx_lyr_2.style.top = (170 - (window.pageYOffset / 1.23)) + 'px';
+		prlx_lyr_2.style.top = (200 - (window.pageYOffset / 2)) + 'px';
 	}
 	window.addEventListener("scroll", parallax, false);
 	
@@ -22,19 +22,20 @@
 				'easeInOutExpo'
 			);
 		
-		var pictures = ['url(images/home-2.jpg)','url(images/home-3.jpg)','url(images/home-4.jpg)','url(images/casels-home-pic.jpg)','url(images/home-5.jpg)'],
-        textalign =['left','left','right','right','right'],
+		var pictures = ['url(images/home/Casels-38.jpg)','url(images/home/Casels-42.jpg)','url(images/home/Casels-100.jpg)','url(images/home/home-salad.jpg)','url(images/home/gluten-home.jpg)','url(images/home/Casels-36.jpg)'],
+        textalign =['left','right','right','left','right','right','right'],
 			i = 0,
         $body = $('#main-picture-home');
     
     	setInterval(function(){ 
-			$body.css('background', pictures[i++ % pictures.length]).css('background-size','cover');
-			$('#home-text').css('text-align', textalign[i++ % textalign.length]);
+			$body.css('background', pictures[i % pictures.length]).css('background-size','cover');
+			$('#home-text').css('text-align', textalign[i % textalign.length]);
+			i++;
 							  
 							  }, 7000);
 		
 		var $changer = $("#home-text-changing"),
-			words = ['Red Mill','Gluten Free','Fresh Produce','Hand Cut Meat','Everthing'],
+			words = ['Baked Goods','Fresh Produce','Crab Cakes','Fresh Salads','Gluten Free','Everything'],
 			w = 0;
 		
 		setInterval(function(){ $changer.text(words[w++ % words.length]).fadeIn()},7000);
@@ -44,10 +45,10 @@
 	<div id="home-text">
 		<div class="wrapper">
 			<div class="home-logo-animater">
-				<img src={{ URL::asset( 'images/logo.png') }} alt="Casel's Logo" id="mobile-nav-logo" class="home-logo-animater" style="width:300px;margin-bottom:15px;" /><br />
+				<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="mobile-nav-logo" class="home-logo-animater" style="width:300px;margin-bottom:15px;" /><br />
 			</div>	
 			<div class="home-text-animater">
-				<h1 class="carousel-main">"The Best <br>of <span id="home-text-changing" style="">Everything</span>"</h1>
+				<h1 class="carousel-main">"The Best of <br/><span id="home-text-changing">Everything</span>"</h1>
 				<p class="carousel-sub">Hand Selected for the Best Quality</p>
 				<p><a class="carousel-btn" href="#">Learn more</a></p>
 			</div>
@@ -111,8 +112,8 @@
 			<div id="secondary-main-right">
 			  <div class="secondary-main-wrap">
 				  <div class="secondary-main-inner">
-					  <a href="circular" class="no-dec-link"><h1 class="secondary-main-title" id="secondary-title-3">Save with Casel's Weekly Circular</h1></a>
-					  {{ HTML::link('circular', 'View Now', array('class' => 'secondary-main-cta', 'id' => 'bottom-cta-3')) }}
+					  <a href="http://casels.s3.amazonaws.com/bam_store/PDF/current_circular.pdf" class="no-dec-link"><h1 class="secondary-main-title" id="secondary-title-3">Save with Casel's Weekly Circular</h1></a>
+					  <a href="http://casels.s3.amazonaws.com/bam_store/PDF/current_circular.pdf" class="secondary-main-cta" id="bottom-cta-3">View Now</a>
 				  </div>
 			  </div>
 			</div>
