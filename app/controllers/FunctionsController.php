@@ -224,210 +224,244 @@ class FunctionsController extends BaseController {
 	{
 		require_once('tradingConstants.php');
 		
-		$productData = array(
-			'title' => Input::get('title'),
-			'description' => Input::get('description'),
-			'categoryID' => Input::get('category'),
-			'startPrice' => Input::get('price'),
-			'paypal' => Input::get('paypal'),
-			'duration' => Input::get('duration'),
-			'condition' => Input::get('condition'),
-			'quantity_ebay' => Input::get('q_ebay'),
-			'quantity_store' => Input::get('q_store'),
-			'picture' => Input::get('image'),
-			'length' => Input::get('length'),
-			'width' => Input::get('width'),
-			'height' => Input::get('height')
-		);
-
-		$rules = array(
-			'title' => 'Required',
-			'description' => 'Required',
-			'categoryID' => 'Required',
-			'startPrice' => 'Required',
-			'paypal' => 'Required',
-			'duration' => 'Required',
-			'condition' => 'Required',
-			'length' => 'Required',
-			'width' => 'Required',
-			'height' => 'Required'
-		);
-		
-		$shipping = $this->getCalcShipping($productData['length'], $productData['width'], $productData['height']);
-		$tax = 
-		$file = Input::file('image');
-		$destinationPath = 'product_images/';
-		$filename = uniqid("casels_") . ".jpg";
-		
-		Input::file('image')->move($destinationPath, $filename);
-		
-		$fileURL = "http://aidevserver.co/projects/casels/public/product_images/" . $filename;
-		$Validator = Validator::make($productData,  $rules);
-		
-		if($Validator->passes())
-		{	
-			// grab our posted keywords and call helper function
-			// TODO: check if need urlencode
-
-			// Create unique id for adding item to prevent duplicate adds
-			$uuid = md5(uniqid());
-
-			// create the XML request
-			$xmlRequest  = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
-			$xmlRequest .= "<AddItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">";
-			$xmlRequest .= "<ErrorLanguage>en_US</ErrorLanguage>";
-			$xmlRequest .= "<WarningLevel>High</WarningLevel>";
-			$xmlRequest .= "<Item>";
-			$xmlRequest .= "<Title>" . $productData['title'] . "</Title>";
-			$xmlRequest .= "<Description>" . $productData['description'] . "</Description>";
-			$xmlRequest .= "<PrimaryCategory>";
-			$xmlRequest .= "<CategoryID>" . $productData['categoryID'] . "</CategoryID>";
-			$xmlRequest .= "</PrimaryCategory>";
-			$xmlRequest .= "<StartPrice>" . $productData['startPrice'] . "</StartPrice>";
-			$xmlRequest .= "<ConditionID>" . $productData['condition'] . "</ConditionID>";
-			$xmlRequest .= "<CategoryMappingAllowed>true</CategoryMappingAllowed>";
-			$xmlRequest .= "<Country>US</Country>";
-			$xmlRequest .= "<Currency>USD</Currency>";
-			$xmlRequest .= "<DispatchTimeMax>3</DispatchTimeMax>";
-			$xmlRequest .= "<ListingDuration>" . $productData['duration'] . "</ListingDuration>";
-			$xmlRequest .= "<ListingType>FixedPriceItem</ListingType>";
-			$xmlRequest .= "<PaymentMethods>PayPal</PaymentMethods>";
-			$xmlRequest .= "<PayPalEmailAddress>" . $productData['paypal'] . "</PayPalEmailAddress>";
-			$xmlRequest .= "<PictureDetails>";
-			$xmlRequest .= "<GalleryType>Gallery</GalleryType>";
-			$xmlRequest .= "<PictureURL>" . $fileURL . "</PictureURL>";
-			$xmlRequest .= "<GalleryURL>" . $fileURL . "</GalleryURL>";
-			$xmlRequest .= "</PictureDetails>";
-			$xmlRequest .= "<PostalCode>05485</PostalCode>";
-			$xmlRequest .= "<Quantity>" . $productData['quantity_ebay'] . "</Quantity>";
-			$xmlRequest .= "<ReturnPolicy>";
-			$xmlRequest .= "<ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>";
-			$xmlRequest .= "<RefundOption>MoneyBack</RefundOption>";
-			$xmlRequest .= "<ReturnsWithinOption>Days_30</ReturnsWithinOption>";
-			$xmlRequest .= "<Description>" . $productData['description']. "</Description>";
-			$xmlRequest .= "<ShippingCostPaidByOption>Buyer</ShippingCostPaidByOption>";
-			$xmlRequest .= "</ReturnPolicy>";
-			$xmlRequest .= "<ShippingDetails>";
-			$xmlRequest .= "<ShippingType>Flat</ShippingType>";
-			$xmlRequest .= "<ShippingServiceOptions>";
-			$xmlRequest .= "<ShippingServicePriority>1</ShippingServicePriority>";
-			$xmlRequest .= "<ShippingService>USPSMedia</ShippingService>";
-			$xmlRequest .= "<ShippingServiceCost>" . $shipping . "</ShippingServiceCost>";
-			$xmlRequest .= "<ShippingServiceAdditionalCost>0</ShippingServiceAdditionalCost>";
-			$xmlRequest .= "</ShippingServiceOptions>";
-			$xmlRequest .= "</ShippingDetails>";
-			$xmlRequest .= "<Site>US</Site>";
-			$xmlRequest .= "<UUID>" . $uuid . "</UUID>";
-			$xmlRequest .= "</Item>";
-			$xmlRequest .= "<RequesterCredentials>";
-			$xmlRequest .= "<eBayAuthToken>" . AUTH_TOKEN . "</eBayAuthToken>";
-			$xmlRequest .= "</RequesterCredentials>";
-			$xmlRequest .= "<WarningLevel>High</WarningLevel>";
-			$xmlRequest .= "</AddItemRequest>";
-
-			// define our header array for the Trading API call
-			// notice different headers from shopping API and SITE_ID changes to SITEID
-			$headers = array(
-			'X-EBAY-API-SITEID:'.SITEID,
-			'X-EBAY-API-CALL-NAME:AddItem',
-			'X-EBAY-API-REQUEST-ENCODING: JSON',
-			'X-EBAY-API-COMPATIBILITY-LEVEL:' . API_COMPATIBILITY_LEVEL,
-			'X-EBAY-API-DEV-NAME:' . API_DEV_NAME,
-			'X-EBAY-API-APP-NAME:' . API_APP_NAME,
-			'X-EBAY-API-CERT-NAME:' . API_CERT_NAME,
-			'Content-Type: text/xml;charset=utf-8'
+		if(Input::get('on_ebay') == 'Yes') {
+			$productData = array(
+				'title' => Input::get('title'),
+				'description' => Input::get('description'),
+				'categoryID' => Input::get('category'),
+				'startPrice' => Input::get('price'),
+				'paypal' => Input::get('paypal'),
+				'duration' => Input::get('duration'),
+				'condition' => Input::get('condition'),
+				'quantity_ebay' => Input::get('q_ebay'),
+				'quantity_store' => Input::get('q_store'),
+				'picture' => Input::get('image'),
+				'length' => Input::get('length'),
+				'width' => Input::get('width'),
+				'height' => Input::get('height')
 			);
 
-			// initialize our curl session
-			$session  = curl_init(API_URL);
-
-			// set our curl options with the XML request
-			curl_setopt($session, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($session, CURLOPT_POST, true);
-			curl_setopt($session, CURLOPT_POSTFIELDS, $xmlRequest);
-			curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-
-			// execute the curl request
-			$responseXML = curl_exec($session);
-
-			// close the curl session
-			curl_close($session);
-
-			$additemresponse = simplexml_load_string($responseXML);
+			$rules = array(
+				'title' => 'Required',
+				'description' => 'Required',
+				'categoryID' => 'Required',
+				'startPrice' => 'Required',
+				'paypal' => 'Required',
+				'duration' => 'Required',
+				'condition' => 'Required',
+				'length' => 'Required',
+				'width' => 'Required',
+				'height' => 'Required'
+			);
 			
-			if($additemresponse->Ack == "Success")
-			{
-				$Inventory = new Inventory();
-				$Inventory ->product_id = $additemresponse->ItemID;
-				$Inventory ->title = $productData['title'];
-				$Inventory ->description = $productData['description'];
-				$Inventory ->condition = $productData['condition'];
-				$Inventory ->category_id = $productData['categoryID'];
-				$Inventory ->price = $productData['startPrice'];
-				if($productData['quantity_ebay'] == 1)
-				{
-					if($productData['quantity_store'] == 1)
-					{
-						$Inventory ->type = 1;
-					}
-					elseif($productData['quantity_store'] > 1)
-					{
-						$Inventory ->type = 0;
-					}
-				}
-				$Inventory ->inventory = $productData['quantity_store'];
-				$Inventory ->active = 1;
-				$Inventory ->picture_id = $fileURL;
-				$Inventory ->shipping = $shipping;
+			$shipping = $this->getCalcShipping($productData['length'], $productData['width'], $productData['height']);
+			$tax = 
+			$file = Input::file('image');
+			$destinationPath = 'product_images/';
+			$filename = uniqid("casels_") . ".jpg";
+			
+			Input::file('image')->move($destinationPath, $filename);
+			
+			$fileURL = "http://aidevserver.co/projects/casels/public/product_images/" . $filename;
+			$Validator = Validator::make($productData,  $rules);
+			
+			if($Validator->passes())
+			{	
+				// grab our posted keywords and call helper function
+				// TODO: check if need urlencode
+
+				// Create unique id for adding item to prevent duplicate adds
+				$uuid = md5(uniqid());
+
+				// create the XML request
+				$xmlRequest  = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+				$xmlRequest .= "<AddItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">";
+				$xmlRequest .= "<ErrorLanguage>en_US</ErrorLanguage>";
+				$xmlRequest .= "<WarningLevel>High</WarningLevel>";
+				$xmlRequest .= "<Item>";
+				$xmlRequest .= "<Title>" . $productData['title'] . "</Title>";
+				$xmlRequest .= "<Description>" . $productData['description'] . "</Description>";
+				$xmlRequest .= "<PrimaryCategory>";
+				$xmlRequest .= "<CategoryID>" . $productData['categoryID'] . "</CategoryID>";
+				$xmlRequest .= "</PrimaryCategory>";
+				$xmlRequest .= "<StartPrice>" . $productData['startPrice'] . "</StartPrice>";
+				$xmlRequest .= "<ConditionID>" . $productData['condition'] . "</ConditionID>";
+				$xmlRequest .= "<CategoryMappingAllowed>true</CategoryMappingAllowed>";
+				$xmlRequest .= "<Country>US</Country>";
+				$xmlRequest .= "<Currency>USD</Currency>";
+				$xmlRequest .= "<DispatchTimeMax>3</DispatchTimeMax>";
+				$xmlRequest .= "<ListingDuration>" . $productData['duration'] . "</ListingDuration>";
+				$xmlRequest .= "<ListingType>FixedPriceItem</ListingType>";
+				$xmlRequest .= "<PaymentMethods>PayPal</PaymentMethods>";
+				$xmlRequest .= "<PayPalEmailAddress>" . $productData['paypal'] . "</PayPalEmailAddress>";
+				$xmlRequest .= "<PictureDetails>";
+				$xmlRequest .= "<GalleryType>Gallery</GalleryType>";
+				$xmlRequest .= "<PictureURL>" . $fileURL . "</PictureURL>";
+				$xmlRequest .= "<GalleryURL>" . $fileURL . "</GalleryURL>";
+				$xmlRequest .= "</PictureDetails>";
+				$xmlRequest .= "<PostalCode>05485</PostalCode>";
+				$xmlRequest .= "<Quantity>" . $productData['quantity_ebay'] . "</Quantity>";
+				$xmlRequest .= "<ReturnPolicy>";
+				$xmlRequest .= "<ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>";
+				$xmlRequest .= "<RefundOption>MoneyBack</RefundOption>";
+				$xmlRequest .= "<ReturnsWithinOption>Days_30</ReturnsWithinOption>";
+				$xmlRequest .= "<Description>" . $productData['description']. "</Description>";
+				$xmlRequest .= "<ShippingCostPaidByOption>Buyer</ShippingCostPaidByOption>";
+				$xmlRequest .= "</ReturnPolicy>";
+				$xmlRequest .= "<ShippingDetails>";
+				$xmlRequest .= "<ShippingType>Flat</ShippingType>";
+				$xmlRequest .= "<ShippingServiceOptions>";
+				$xmlRequest .= "<ShippingServicePriority>1</ShippingServicePriority>";
+				$xmlRequest .= "<ShippingService>USPSMedia</ShippingService>";
+				$xmlRequest .= "<ShippingServiceCost>" . $shipping . "</ShippingServiceCost>";
+				$xmlRequest .= "<ShippingServiceAdditionalCost>0</ShippingServiceAdditionalCost>";
+				$xmlRequest .= "</ShippingServiceOptions>";
+				$xmlRequest .= "</ShippingDetails>";
+				$xmlRequest .= "<Site>US</Site>";
+				$xmlRequest .= "<UUID>" . $uuid . "</UUID>";
+				$xmlRequest .= "</Item>";
+				$xmlRequest .= "<RequesterCredentials>";
+				$xmlRequest .= "<eBayAuthToken>" . AUTH_TOKEN . "</eBayAuthToken>";
+				$xmlRequest .= "</RequesterCredentials>";
+				$xmlRequest .= "<WarningLevel>High</WarningLevel>";
+				$xmlRequest .= "</AddItemRequest>";
+
+				// define our header array for the Trading API call
+				// notice different headers from shopping API and SITE_ID changes to SITEID
+				$headers = array(
+				'X-EBAY-API-SITEID:'.SITEID,
+				'X-EBAY-API-CALL-NAME:AddItem',
+				'X-EBAY-API-REQUEST-ENCODING: JSON',
+				'X-EBAY-API-COMPATIBILITY-LEVEL:' . API_COMPATIBILITY_LEVEL,
+				'X-EBAY-API-DEV-NAME:' . API_DEV_NAME,
+				'X-EBAY-API-APP-NAME:' . API_APP_NAME,
+				'X-EBAY-API-CERT-NAME:' . API_CERT_NAME,
+				'Content-Type: text/xml;charset=utf-8'
+				);
+
+				// initialize our curl session
+				$session  = curl_init(API_URL);
+
+				// set our curl options with the XML request
+				curl_setopt($session, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($session, CURLOPT_POST, true);
+				curl_setopt($session, CURLOPT_POSTFIELDS, $xmlRequest);
+				curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+				// execute the curl request
+				$responseXML = curl_exec($session);
+
+				// close the curl session
+				curl_close($session);
+
+				$additemresponse = simplexml_load_string($responseXML);
 				
-				$Inventory ->save();
-				return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">Listing Created: ' . $additemresponse->ItemID . '</div>');
-			}
-			
-			elseif($additemresponse->Ack == "Failure")
-			{
-				return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%"><code>' . $responseXML . '</code></div>');
-			}
-			
-			elseif($additemresponse->Ack == "Warning")
-			{
-				$Inventory = new Inventory();
-				$Inventory ->product_id = $additemresponse->ItemID;
-				$Inventory ->title = $productData['title'];
-				$Inventory ->description = $productData['description'];
-				$Inventory ->condition = $productData['condition'];
-				$Inventory ->category_id = $productData['categoryID'];
-				$Inventory ->price = $productData['startPrice'];
-				if($productData['quantity_ebay'] == 1)
+				if($additemresponse->Ack == "Success")
 				{
-					if($productData['quantity_store'] == 1)
+					$Inventory = new Inventory();
+					$Inventory ->product_id = $additemresponse->ItemID;
+					$Inventory ->title = $productData['title'];
+					$Inventory ->description = $productData['description'];
+					$Inventory ->condition = $productData['condition'];
+					$Inventory ->category_id = $productData['categoryID'];
+					$Inventory ->price = $productData['startPrice'];
+					if($productData['quantity_ebay'] == 1)
 					{
-						$Inventory ->type = 1;
+						if($productData['quantity_store'] == 1)
+						{
+							$Inventory ->type = 1;
+						}
+						elseif($productData['quantity_store'] > 1)
+						{
+							$Inventory ->type = 0;
+						}
 					}
-					elseif($productData['quantity_store'] > 1)
-					{
-						$Inventory ->type = 0;
-					}
+					$Inventory ->inventory = $productData['quantity_store'];
+					$Inventory ->active = 1;
+					$Inventory ->picture_id = $fileURL;
+					$Inventory ->shipping = $shipping;
+					
+					$Inventory ->save();
+					return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">Listing Created: ' . $additemresponse->ItemID . '</div>');
 				}
-				$Inventory ->inventory = $productData['quantity_store'];
-				$Inventory ->active = 1;
-				$Inventory ->picture_id = $fileURL;
 				
-				$Inventory ->save();
-				return Redirect::to('')->with('alert', '<div class="alert alert-warning" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">WARNING | Listing Created: ' . $additemresponse->ItemID . '</div>');
+				elseif($additemresponse->Ack == "Failure")
+				{
+					return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%"><code>' . $responseXML . '</code></div>');
+				}
+				
+				elseif($additemresponse->Ack == "Warning")
+				{
+					$Inventory = new Inventory();
+					$Inventory ->product_id = $additemresponse->ItemID;
+					$Inventory ->title = $productData['title'];
+					$Inventory ->description = $productData['description'];
+					$Inventory ->condition = $productData['condition'];
+					$Inventory ->category_id = $productData['categoryID'];
+					$Inventory ->price = $productData['startPrice'];
+					if($productData['quantity_ebay'] == 1)
+					{
+						if($productData['quantity_store'] == 1)
+						{
+							$Inventory ->type = 1;
+						}
+						elseif($productData['quantity_store'] > 1)
+						{
+							$Inventory ->type = 0;
+						}
+					}
+					$Inventory ->inventory = $productData['quantity_store'];
+					$Inventory ->active = 1;
+					$Inventory ->picture_id = $fileURL;
+					
+					$Inventory ->save();
+					return Redirect::to('')->with('alert', '<div class="alert alert-warning" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">WARNING | Listing Created: ' . $additemresponse->ItemID . '</div>');
+				}
+				
+				else
+				{
+					return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%"><code>' . $responseXML . '</code></div>');
+				}
 			}
 			
-			else
+			elseif($Validator->fails())
 			{
-				return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%"><code>' . $responseXML . '</code></div>');
+				//form validation failed
+				$le_error = $Validator->errors()->all();
+				return Redirect::to('/')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0;margin-bottom:40px;position:relative; width:85%">Error: ' . var_dump($Validator->errors()->all()) . '</div>');
 			}
 		}
-		
-		elseif($Validator->fails())
-		{
-			//form validation failed
-			$le_error = $Validator->errors()->all();
-			return Redirect::to('/')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0;margin-bottom:40px;position:relative; width:85%">Error: ' . var_dump($Validator->errors()->all()) . '</div>');
+
+		elseif(Input::get('on_ebay') == 'No') {
+			$productData = array(
+				'title' => Input::get('title'),
+				'description' => Input::get('description'),
+				'startPrice' => Input::get('price'),
+				'paypal' => Input::get('paypal'),
+				'condition' => Input::get('condition'),
+				'quantity_store' => Input::get('q_store'),
+				'picture' =>  Input::get('image'),
+				'length' => Input::get('length'),
+				'width' => Input::get('width'),
+				'height' => Input::get('height')
+			);
+
+			$rules = array(
+				'title' => 'Required',
+				'description' => 'Required',
+				'startPrice' => 'Required',
+				'paypal' => 'Required',
+				'condition' => 'Required',
+				'length' => 'Required',
+				'width' => 'Required',
+				'height' => 'Required'
+			);
+
+
+		}
+
+		else{
+			//something reall dun goof'd
 		}
 	}
 
