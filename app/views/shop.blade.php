@@ -82,7 +82,7 @@
 									<a href="#" class="sf-cta">View Now</a>
 								</div>								</div>
 							<div id="main-featured-area-3">
-								<img src="./images/shop-feat-1.jpg" class="shop-f-img">
+								<img src="./images/shop-feat-3.jpg" class="shop-f-img">
 								<div class="shop-f-ab">
 									<h1 class="shop-f-head">
 										Fea
