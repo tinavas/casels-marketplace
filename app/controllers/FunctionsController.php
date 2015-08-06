@@ -469,7 +469,7 @@ class FunctionsController extends BaseController {
 			if($Validator->passes())
 			{	
 				$Inventory = new Inventory();
-				$Inventory ->product_id = $additemresponse->ItemID;
+				$Inventory ->product_id = uniqid();
 				$Inventory ->title = $productData['title'];
 				$Inventory ->description = $productData['description'];
 				$Inventory ->condition = $productData['condition'];
