@@ -1730,6 +1730,8 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     float: left;
     width: 32%;
     background-color: red;
+		background: url(../images/shop-feat-1.jpg);
+    background-size: cover;
     margin-right: 2%;
 	position:relative;
 	overflow:hidden;
@@ -1739,6 +1741,8 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     float: left;
     width: 32%;
     background-color: red;
+		background: url(../images/shop-feat-2.jpg);
+    background-size: cover;
     margin-right: 2%;
 	position:relative;
 	overflow:hidden;
@@ -1748,6 +1752,8 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     float: left;
     width: 32%;
     background-color: red;
+		background: url(../images/shop-feat-3.jpg);
+    background-size: cover;
 	position:relative;
 	overflow:hidden;
 }
