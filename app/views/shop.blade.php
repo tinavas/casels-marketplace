@@ -64,21 +64,32 @@
 				<div id="content">
 					<div class="wrapper">
 						<div id="featured-products-area">
-							<a href="#" class="shop-feat-cta">
-								<div id="main-featured-area-1">
-
+							<div id="main-featured-area-1">
+								<img src="./images/shop-feat-1.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Arte Italica
+									</h1>
+									<a href="#" class="sf-cta">View Now</a>
 								</div>
-							</a>
-							<a href="#" class="shop-feat-cta">
-								<div id="main-featured-area-2">
-
+							</div>
+							<div id="main-featured-area-2">
+								<img src="./images/shop-feat-2.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Caspari Napkins
+									</h1>
+									<a href="#" class="sf-cta">View Now</a>
+								</div>								</div>
+							<div id="main-featured-area-3">
+								<img src="./images/shop-feat-1.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Fea
+									</h1>
+									<a href="#" class="sf-cta">View Now</a>
 								</div>
-							</a>
-							<a href="#" class="shop-feat-cta">
-								<div id="main-featured-area-3">
-
-								</div>
-							</a>
+							</div>
 						</div>
 
 						<form method="post" action="search" id="specific-search-refine">
@@ -87,7 +98,7 @@
 									<div id="mobile-refiner">
 									<i class="fa fa-bars"></i>
 									<p>Refine</p>
-									</div>	
+									</div>
 									<input type="text" name="search" id="search-refiner" placeholder="Search Items...">
 								</div>
 								<div id="shop-refine-mobile-drop">
@@ -162,7 +173,7 @@
 								<div class="cta-product">
 			                            <a href="product/{{ $product ->id }}" class="learn-more"> Learn More</a>
 			                            <a href="cart/addFromShop/{{ $product ->id }}" class="buy-now">Add To Cart</a>
-									
+
 		                        </div>
 							</div>
 							@endforeach
