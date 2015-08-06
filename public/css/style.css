@@ -1732,6 +1732,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     background-color: red;
     margin-right: 2%;
 	position:relative;
+	overflow:hidden;
 }
 #main-featured-area-2 {
     height: 250px;
@@ -1740,6 +1741,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     background-color: red;
     margin-right: 2%;
 	position:relative;
+	overflow:hidden;
 }
 #main-featured-area-3 {
     height: 250px;
@@ -1747,6 +1749,56 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     width: 32%;
     background-color: red;
 	position:relative;
+	overflow:hidden;
+}
+.shop-f-img {
+    min-height: 100%;
+    min-width: 100%;
+}
+.shop-f-ab {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+.sf-cta{
+bottom: 0;
+    display: inline-block;
+    border-radius: 5px;
+    width: 120px;
+    padding: 10px 0;
+    border: 1px solid rgb(190, 4, 8);
+    text-decoration: none;
+    color: white;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600px;
+    background-color: rgb(143, 0, 5);
+    box-shadow: inset 0px 0px 10px rgb(226, 10, 16);
+    -webkit-box-shadow: inset 0px 0px 10px rgb(226, 10, 16);
+    -moz-box-shadow: inset 0px 0px 10px rgb(226, 10, 16);
+    -o-box-shadow: inset 0px 0px 10px rgb(226, 10, 16);
+    -ms-box-shadow: inset 0px 0px 10px rgb(226, 10, 16);
+}
+.sf-cta:hover{
+	text-decoration: none;
+box-shadow: none;
+/* margin-top: 2px; */
+background-color: rgba(116, 2, 6, 1);
+border-color: rgb(226, 10, 16);
+color: white;
+}
+.shop-f-head{
+font-family: lithosBlack;
+font-size: 24px;
+text-shadow: 1px 1px 3px black;
+color:white;
 }
 
 /*===========================----INTERNAL PAGE----===========================*/
@@ -1863,15 +1915,15 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 }
 
 .catering-sub-wrap-top{
-	display:table; 
-	height:auto; 
+	display:table;
+	height:auto;
 	width:100%;
 	margin-bottom:2.5%;
 }
 
 .catering-sub-wrap{
-	display:table; 
-	height:auto; 
+	display:table;
+	height:auto;
 	width:100%;
 }
 
@@ -2039,7 +2091,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 	width: 10%;
 }
 .gmnoprint img {
-    max-width: none !important; 
+    max-width: none !important;
 }
 
 /*===========================----SIGN UP PAGE----===========================*/
