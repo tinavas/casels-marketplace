@@ -457,7 +457,40 @@ class FunctionsController extends BaseController {
 				'height' => 'Required'
 			);
 
+			$shipping = $this->getCalcShipping($productData['length'], $productData['width'], $productData['height']);
+			$tax = 
+			$file = Input::file('image');
+			$destinationPath = 'product_images/';
+			$filename = uniqid("casels_") . ".jpg";
+			
+			Input::file('image')->move($destinationPath, $filename);
+			
+			$fileURL = "http://aidevserver.co/projects/casels/public/product_images/" . $filename;
+			$Validator = Validator::make($productData,  $rules);
+			
+			if($Validator->passes())
+			{	
+				$Inventory = new Inventory();
+				$Inventory ->product_id = $additemresponse->ItemID;
+				$Inventory ->title = $productData['title'];
+				$Inventory ->description = $productData['description'];
+				$Inventory ->condition = $productData['condition'];
+				$Inventory ->price = $productData['startPrice'];
+				$Inventory ->inventory = $productData['quantity_store'];
+				$Inventory ->active = 1;
+				$Inventory ->picture_id = $fileURL;
+				$Inventory ->shipping = $shipping;
+				
+				$Inventory ->save();
 
+				return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">Listing Created</div>');
+			}
+			elseif($Validator->fails())
+			{
+				//form validation failed
+				$le_error = $Validator->errors()->all();
+				return Redirect::to('/')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0;margin-bottom:40px;position:relative; width:85%">Error: ' . var_dump($Validator->errors()->all()) . '</div>');
+			}
 		}
 
 		else{
