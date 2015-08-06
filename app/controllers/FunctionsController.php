@@ -426,8 +426,6 @@ class FunctionsController extends BaseController {
 			
 			elseif($Validator->fails())
 			{
-				//form validation failed
-				$le_error = $Validator->errors()->all();
 				return Redirect::to('/')->withErrors($Validator);
 			}
 		}
