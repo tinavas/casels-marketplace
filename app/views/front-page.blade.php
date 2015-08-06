@@ -71,6 +71,13 @@
 			@if ($message = Session::get('alert'))
 			{{ $message }}
 			@endif
+			@if ($errors->has())
+				<div class="alert alert-danger">
+					@foreach ($errors->all() as $error)
+						{{ $error }}<br>        
+					@endforeach
+				</div>
+			@endif
 			<div id="top-main-left">
 				<div class="top-main-wrap">
 					<div class="top-main-inner">
