@@ -428,7 +428,7 @@ class FunctionsController extends BaseController {
 			{
 				//form validation failed
 				$le_error = $Validator->errors()->all();
-				return Redirect::to('/')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0;margin-bottom:40px;position:relative; width:85%">Error: ' . var_dump($Validator->errors()->all()) . '</div>');
+				return Redirect::to('/')->withErrors($Validator);
 			}
 		}
 
