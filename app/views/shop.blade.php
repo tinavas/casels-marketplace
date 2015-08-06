@@ -149,6 +149,7 @@
 									</div>
 									<p class="product-description">
 										<?php
+										$body = null;
 											//$body = chunk_split ($product ->description, 180,"<br/><br/>");
 											if (strlen($product->description) > 10)
 											   $body = substr($product->description, 0, 240) . '...';
