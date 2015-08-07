@@ -80,12 +80,13 @@
 										Caspari Napkins
 									</h1>
 									<a href="#" class="sf-cta">View Now</a>
-								</div>								</div>
+								</div>
+							</div>
 							<div id="main-featured-area-3">
 								<img src="./images/shop-feat-3.jpg" class="shop-f-img">
 								<div class="shop-f-ab">
 									<h1 class="shop-f-head">
-										Fea
+										Winning Solutions
 									</h1>
 									<a href="#" class="sf-cta">View Now</a>
 								</div>
