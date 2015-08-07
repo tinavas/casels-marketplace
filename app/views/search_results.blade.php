@@ -64,38 +64,50 @@
 				<div id="content">
 					<div class="wrapper">
 						<form method="post" action="search" id="specific-search-refine">
-						<div id="refine-search">
-							<div id="refine-search-input">
-								<div id="mobile-refiner">
-								<i class="fa fa-bars"></i>
-								<p>Refine</p>
-								</div>	
-								<input type="text" name="search" id="search-refiner" placeholder="Search Items...">
-							</div>
-								<div id="department">
-									<p style="font-weight:bold;">Department:</p>
-									<div class="form-group">
-										<select name="category" id="category">
-											<option>Home-Goods</option>
-											<option>Board-Games</option>
-											<option>Silverware</option>
-											<option>Antiques</option>
-										</select>
+							<div id="refine-search">
+								<div id="refine-search-input">
+									<div id="mobile-refiner">
+									<i class="fa fa-bars"></i>
+									<p>Refine</p>
 									</div>
+									<input type="text" name="search" id="search-refiner" placeholder="Search Items...">
 								</div>
-								<div id="price-selector">
-									<p>
-										<label for="amount">Price range:</label>
-										<input type="text" id="amount" readonly style="border:0;">
-									</p>
-									<div id="slider-range"></div>
-								</div>
-								<div id="submit-refine">
-									<input type="submit" name="submit" value="submit">
+								<div id="shop-refine-mobile-drop">
+									<div id="department">
+										<p style="font-weight:bold;">Department:</p>
+										<div class="form-group">
+											<select name="category" id="category">
+												<option>Home-Goods</option>
+												<option>Board-Games</option>
+												<option>Silverware</option>
+												<option>Antiques</option>
+											</select>
+										</div>
+									</div>
+									<div id="min-max">
+										<p style="font-weight:bold;">
+											Min Price:
+										</p>
+										<input name="minprice">
+										<p style="font-weight:bold;">
+											Max Price:
+										</p>
+										<input name="maxprice">
+									</div>
+									<!--<div id="price-selector">
+										<p>
+											<label for="amount">Price range:</label>
+											<input type="text" id="amount" name="amount" readonly style="border:0;">
+										</p>
+										<div id="slider-range"></div>
+									</div>-->
+									<div id="submit-refine">
+										<input type="submit" name="submit" value="submit">
+									</div>
 								</div>
 							</div>
 						</form>
-						
+
 						<div id="product-list">
 
 								<?php
@@ -108,7 +120,7 @@
 											->get();
 										$array_keys = count($results);
 
-										for ($i = 0; $i < $array_keys; $i++) 
+										for ($i = 0; $i < $array_keys; $i++)
 										{
 											echo '
 												<div class="product-individual-wrap">
@@ -150,7 +162,7 @@
 											->get();
 										$array_keys = count($results);
 
-										for ($i = 0; $i < $array_keys; $i++) 
+										for ($i = 0; $i < $array_keys; $i++)
 										{
 											echo '
 												<div class="product-individual-wrap">
@@ -190,9 +202,9 @@
 												->orWhere('description', 'LIKE', '%'. $search_query .'%')
 												->Where('category', '=', 'Silverware')
 												->get();
-											
+
 											$array_keys = count($results);
-											for ($i = 0; $i < $array_keys; $i++) 
+											for ($i = 0; $i < $array_keys; $i++)
 										{
 											echo '
 												<div class="product-individual-wrap">
@@ -223,9 +235,9 @@
 															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
 													</div>
 												</div>';
-											}							
-										}				
-									
+											}
+										}
+
 
 									elseif($cat == "Antiques")
 									{
@@ -235,7 +247,7 @@
 											->get();
 										$array_keys = count($results);
 
-										for ($i = 0; $i < $array_keys; $i++) 
+										for ($i = 0; $i < $array_keys; $i++)
 										{
 											echo '
 												<div class="product-individual-wrap">
@@ -266,7 +278,7 @@
 															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
 													</div>
 												</div>';
-										}										
+										}
 									}
 
 									else
