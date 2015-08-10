@@ -10,6 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/tag/{tag}', 'FunctionsController@getTag');
 Route::get('/orders', 'PayPalPaymentController@getSummary');
 /* Email Route */
 Route::post('/email', 'FunctionsController@getEmail');

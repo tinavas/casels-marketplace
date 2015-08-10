@@ -238,7 +238,8 @@ class FunctionsController extends BaseController {
 				'picture' => Input::get('image'),
 				'length' => Input::get('length'),
 				'width' => Input::get('width'),
-				'height' => Input::get('height')
+				'height' => Input::get('height'),
+				'store-tag' => Input::get('store-tag')
 			);
 
 			$rules = array(
@@ -251,7 +252,8 @@ class FunctionsController extends BaseController {
 				'condition' => 'Required',
 				'length' => 'Required',
 				'width' => 'Required',
-				'height' => 'Required'
+				'height' => 'Required',
+				'store-tag' => 'Required'
 			);
 			
 			$shipping = $this->getCalcShipping($productData['length'], $productData['width'], $productData['height']);
@@ -380,6 +382,7 @@ class FunctionsController extends BaseController {
 					$Inventory ->active = 1;
 					$Inventory ->picture_id = $fileURL;
 					$Inventory ->shipping = $shipping;
+					$Inventory ->tag = $productData['store-tag'];
 					
 					$Inventory ->save();
 					return Redirect::to('')->with('alert', '<div class="alert alert-success" role="alert" style="top: 0; margin-bottom:40px;position:relative; width:85%">Listing Created: ' . $additemresponse->ItemID . '</div>');
@@ -441,7 +444,8 @@ class FunctionsController extends BaseController {
 				'picture' =>  Input::get('image'),
 				'length' => Input::get('length'),
 				'width' => Input::get('width'),
-				'height' => Input::get('height')
+				'height' => Input::get('height'),
+				'store-tag' => Input::get('store-tag')
 			);
 
 			$rules = array(
@@ -452,7 +456,8 @@ class FunctionsController extends BaseController {
 				'condition' => 'Required',
 				'length' => 'Required',
 				'width' => 'Required',
-				'height' => 'Required'
+				'height' => 'Required',
+				'store-tag' => 'Required'
 			);
 
 			$shipping = $this->getCalcShipping($productData['length'], $productData['width'], $productData['height']);
@@ -478,6 +483,7 @@ class FunctionsController extends BaseController {
 				$Inventory ->active = 1;
 				$Inventory ->picture_id = $fileURL;
 				$Inventory ->shipping = $shipping;
+				$Inventory ->tag = $productData['store-tag'];
 				
 				$Inventory ->save();
 
@@ -875,5 +881,10 @@ class FunctionsController extends BaseController {
 	public function getReviseEbay($ebayID)
 	{
 		return View::make('ebay')->with('itemid', '');
+	}
+
+	public function getTag($tag)
+	{
+		return View::make('tag')->with('tag', $tag);
 	}
 }

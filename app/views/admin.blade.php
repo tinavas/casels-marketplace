@@ -368,6 +368,10 @@
 						<option>10</option>
 					</select>
 				</div>
+				<div class="form-group">
+					<label for="store-tag">Store Tag #</label>
+					<input type="text" class="form-control" name="store-tag" id="store-tag" />
+				</div>
 			</div>
 			
 			<div id="create-part-three-store" style="display:none;">
@@ -385,6 +389,10 @@
 						<option>9</option>
 						<option>10</option>
 					</select>
+				</div>
+				<div class="form-group">
+					<label for="store-tag">Store Tag #</label>
+					<input type="text" class="form-control" name="store-tag" id="store-tag" />
 				</div>
 			</div>
 			 
