@@ -7,7 +7,7 @@
 					</div>
 				</div>
 
-				<header id="myCarousel" class="carousel slide shophome" style="margin-bottom:40px;">
+				<header id="myCarousel" class="carousel slide shophome" style="margin-bottom:40px;display:none;">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
