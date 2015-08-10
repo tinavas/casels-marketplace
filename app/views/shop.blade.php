@@ -3,7 +3,7 @@
 			<div id="shop-now">
 				<div id ="page-main-title" style="margin-bottom:0px">
 					<div class="wrapper">
-						<h1 id="page-h1">Shop Now</h1>
+						<h1 id="page-h1">Casel's Marketplace</h1>
 					</div>
 				</div>
 
