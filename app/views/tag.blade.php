@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('header')
 <div id="product-list">
 	<!--this is repeatable for individual products-->
 	@foreach(Inventory::where('inventory', '>=', '1')->orderBy('created_at', 'DSC')->get() as $product)
@@ -42,4 +42,4 @@
 	@endforeach
 	<!--end repeatable-->
 </div>
-@include('layouts.footer')
+@include('footer')
