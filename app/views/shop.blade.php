@@ -70,7 +70,7 @@
 									<h1 class="shop-f-head">
 										Arte Italica
 									</h1>
-									<a href="#" class="sf-cta">View Now</a>
+									<a href="{{ URL::to('tag/arte') }}" class="sf-cta">View Now</a>
 								</div>
 							</div>
 							<div id="main-featured-area-2">
@@ -79,7 +79,7 @@
 									<h1 class="shop-f-head">
 										Caspari Napkins
 									</h1>
-									<a href="#" class="sf-cta">View Now</a>
+									<a href="{{ URL::to('tag/caspari') }}" class="sf-cta">View Now</a>
 								</div>
 							</div>
 							<div id="main-featured-area-3">
