@@ -2,7 +2,7 @@
 <div id="shop-now">
 	<div id ="page-main-title" style="margin-bottom:0px">
 		<div class="wrapper">
-			<h1 id="page-h1">$tag</h1>
+			<h1 id="page-h1">{{ $tag }}</h1>
 		</div>
 	</div>
 	<div id="content">
