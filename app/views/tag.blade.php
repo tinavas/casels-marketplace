@@ -34,8 +34,8 @@
 			</p>
 		</div>
 		<div class="cta-product">
-                <a href="product/{{ $product ->id }}" class="learn-more"> Learn More</a>
-                <a href="cart/addFromShop/{{ $product ->id }}" class="buy-now">Add To Cart</a>
+                <a href="{{ URL::to('product/' . $product ->id) }}" class="learn-more"> Learn More</a>
+                <a href="{{ URL::to('cart/addFromShop/' . $product ->id) }}" class="buy-now">Add To Cart</a>
 
         </div>
 	</div>
