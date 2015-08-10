@@ -1723,7 +1723,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 #featured-products-area{
 	display:table;
 	width:100%;
-	padding-bottom:40px;
+	padding:40px 0;
 }
 #main-featured-area-1 {
     height: 250px;
@@ -1732,10 +1732,16 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     background-color: red;
 		background: url(../images/shop-feat-1.jpg);
     background-size: cover;
-		    background-position: 50%;
+    background-position: 50%;
     margin-right: 2%;
-	position:relative;
-	overflow:hidden;
+		position:relative;
+		overflow:hidden;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		border-radius:5px;
 }
 #main-featured-area-2 {
     height: 250px;
@@ -1744,10 +1750,16 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     background-color: red;
 		background: url(../images/shop-feat-2.jpg);
     background-size: cover;
-		    background-position: 50%;
+    background-position: 50%;
     margin-right: 2%;
-	position:relative;
-	overflow:hidden;
+		position:relative;
+		overflow:hidden;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		border-radius:5px;
 }
 #main-featured-area-3 {
     height: 250px;
@@ -1756,9 +1768,15 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
     background-color: red;
 		background: url(../images/shop-feat-3.jpg);
     background-size: cover;
-		    background-position: 50%;
-	position:relative;
-	overflow:hidden;
+  	background-position: 50%;
+		position:relative;
+		overflow:hidden;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+		border-radius:5px;
 }
 .shop-f-img {
     min-height: 100%;
