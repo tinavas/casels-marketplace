@@ -14,7 +14,7 @@
 	</div>
 	<div id="content">
 		<div class="wrapper">
-			<p style="padding-top: 20px;margin-bottom: 0;"><a href="/shop-now">Casel's Marketplace</a> | @if ($tag == 'arte')
+			<p style="padding-top: 20px;margin-bottom: 0;"><a href="{{ URL::to('shop-now') }}">Casel's Marketplace</a> | @if ($tag == 'arte')
 																																															Arte Italica
 																																														@elseif ($tag == 'caspari')
 																																															Caspari Napkins
