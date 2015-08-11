@@ -7,62 +7,38 @@
 					</div>
 				</div>
 
-				<header id="myCarousel" class="carousel slide" style="margin-bottom:40px;">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<div class="fill" style="background-image:url('./images/shop-3.jpg');background-position:100%;">
-								<div class="wrapper">
-<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Storage Canisters</h1>
-									<p class="shop-slider-sub">Gracious Goods For The Home</p>
-									<p><a class="shop-blue-slider-btn" href="http://aidevserver.co/projects/casels/public/product/10">Learn more</a></p> -->
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url('./images/shop-banner-1.jpg');background-position:100%;">
-								<div class="wrapper">
-<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
-									<p class="shop-slider-sub">Gracious Goods For The Home</p>
-									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="fill" style="background-image:url('./images/shop-banner-2.jpg');background-position:100%;">
-								<div class="wrapper">
-<!-- 									<h1 class="shop-slider-main">The GG Collection Acanthus<br>Metal Chargers Trays</h1>
-									<p class="shop-slider-sub">Gracious Goods For The Home</p>
-									<p><a class="shop-red-slider-btn" href="http://aidevserver.co/projects/casels/public/product/8">Learn more</a></p> -->
-								</div>
-							</div>
-						</div>
-						<!--<div class="item">
-							<div class="fill" style="background-image:url('http://placehold.it/1900x1080&amp;text=Slide Three');"></div>
-							<div class="carousel-caption">
-								<h2>Caption 3</h2>
-							</div>
-						</div>-->
-					</div>
-
-					<!-- Controls -->
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-						<span class="icon-prev"></span>
-					</a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next">
-						<span class="icon-next"></span>
-					</a>
-				</header>
-
 				<div id="content">
 					<div class="wrapper">
+						<div id="featured-products-area">
+							<div id="main-featured-area-1">
+								<img src="./images/shop-feat-1.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Arte Italica
+									</h1>
+									<a href="{{ URL::to('tag/arte') }}" class="sf-cta">View Now</a>
+								</div>
+							</div>
+							<div id="main-featured-area-2">
+								<img src="./images/shop-feat-2.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Caspari Napkins
+									</h1>
+									<a href="{{ URL::to('tag/caspari') }}" class="sf-cta">View Now</a>
+								</div>
+							</div>
+							<div id="main-featured-area-3">
+								<img src="./images/shop-feat-3.jpg" class="shop-f-img">
+								<div class="shop-f-ab">
+									<h1 class="shop-f-head">
+										Winning Solutions
+									</h1>
+									<a href="#" class="sf-cta">View Now</a>
+								</div>
+							</div>
+						</div>
+
 						<form method="post" action="search" id="specific-search-refine">
 							<div id="refine-search">
 								<div id="refine-search-input">
