@@ -1723,7 +1723,7 @@ header.carousel .item, header.carousel .item.active, header.carousel .carousel-i
 #featured-products-area{
 	display:table;
 	width:100%;
-	padding:40px 0;
+	padding:20px 0 40px;
 }
 #main-featured-area-1 {
     height: 250px;

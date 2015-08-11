@@ -14,6 +14,14 @@
 	</div>
 	<div id="content">
 		<div class="wrapper">
+			<p style="padding-top: 20px;margin-bottom: 0;"><a href="#">Casel's Marketplace</a> | @if ($tag == 'arte')
+																																															Arte Italica
+																																														@elseif ($tag == 'caspari')
+																																															Caspari Napkins
+																																														@else
+																																															{{ $tag }}
+																																														@endif
+			</p>
 			<div id="featured-products-area">
 				<div id="main-featured-area-1">
 					<img src="./images/shop-feat-1.jpg" class="shop-f-img">
