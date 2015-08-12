@@ -58,7 +58,7 @@
 				<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="login-logo" style="padding-top:0;" />
 			</a>
       <h1 id="coming-soon-header">
-        Relax! Our store is coming soon!
+        Our store is coming soon!
       </h1>
       <p id="coming-soon-p">Enter you email below to be the first to know when we launch!</p>
 		</div>

@@ -87,7 +87,7 @@ class HomeController extends BaseController {
 				</div>
 				<div id='bot-4-emp' class='emp-pic-prof'>
 					<!--<img src='./images/sidebar.jpg' class='emp-headshot'><br />-->
-					<strong>Joan Lucas</strong><br />Person Shopper/Gift Basket Co-ordinator</p>
+					<strong>Joan Lucas</strong><br />Personal Shopper/Gift Basket Co-ordinator</p>
 				</div>
 			</div>
 			<header id='myCarousel' class='carousel slide' style='height: 550px;margin:20px 0;padding: 10px;background-color: #EDE9E1;box-shadow: 0 0 3px rgba(0, 0, 0, 0.36);'>
@@ -206,7 +206,7 @@ class HomeController extends BaseController {
 							<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
-									   Need something iconic for your next thank you? Casels gift baskets are both delicious and entertaining. Johnsons Popcorn, Jelly Beans, and Beach Toys are just a few of your choices.
+									   Need something iconic for your next thank you? Casel's gift baskets are both delicious and entertaining. Johnsons Popcorn, Jelly Beans, and Beach Toys are just a few of your choices.
 									  </p>
 									</div>
 								</div>
@@ -480,13 +480,13 @@ class HomeController extends BaseController {
 
 		return View::make('internal',['pageTitle' => 'Home Delivery'],['pageContent' => '
 		<h3 style="font-family: lithosBlack;">Do your grocery shopping from home!</h3>
-		<p>Delivery to your door is available at Casels. Order by noon for afternoon delivery, Monday - Friday. Just <strong>$12.50</strong>.</p>
+		<p>Delivery to your door is available at Casel’s. Order by noon for afternoon delivery, Monday - Friday. Just <strong>$12.50</strong>.</p>
 
 		<p>To place your order please call <a href="tel:16098231805" class="bold-link">609-823-1805</a> and ask for our personal shopper, Joan Lucas. Or you can fax your order to <a href="tel:16098231805" class="bold-link">609-823-0894</a>. Also, you can email your order to <a href="mailto:JoAnn@casels.com." class="bold-link">JoAnn@casel’s.com.</a></p>
 
 		<p>If you fax or email, please call JoAnn Sedlock, our Administrative Store Manager, to let her know you placed an order. There is no other business that takes the time and care in making sure the items you ordered are fresh and correctly picked. Casel’s personal service is something we take pride in.</p>
 
-		<p>Casels has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors.</p>
+		<p>Casel’s has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors.</p>
 
 		<div id="page-main-title">
 		</div>
@@ -625,7 +625,7 @@ google.maps.event.addDomListener(window, "load", initialize);
 			<h1 style="font-size: 14px; font-family: lithosBlack;">Address:</h1>
 			<p style="font-size: 12px;">8008 Ventor Ave.</p>
 			<p style="font-size: 12px;">Margate NJ 08402</p>
-			<p style="font-size: 12px;">Phone: 609.823.2741</p>
+			<p style="font-size: 12px;">Phone: <a href="tel:16098232741" class="bold-link">609.823.2741</a></p>
 			<p style="font-size: 12px;">Fax: 609.823.0894</p>
 			<br />
 			</div>
