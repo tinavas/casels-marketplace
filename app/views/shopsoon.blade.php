@@ -6,7 +6,7 @@
 		position: relative;
 		background: url(images/shopsoon-bg.jpg);
 		background-size: cover;
-		background-position: 50%;
+		background-position: 0%;
 	}
 	nav {
 		display: none;
