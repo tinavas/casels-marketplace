@@ -80,17 +80,17 @@
 			@endif
 
 			<div id="mobile-phone-dir">
-				<a href="get-card" class="no-dec-link">
+				<a href="https://www.google.com/maps/place/Casel's+Marketplace/@39.3295905,-74.4992907,17z/data=!3m1!4b1!4m2!3m1!1s0x89c0ec0a0abca363:0xfead7dceed14182b" class="no-dec-link">
 					<div id="top-main-leftmob">
 						<div class="top-main-wrapmob">
 							<div class="top-main-innermob">
 								<h1 class="top-main-titlemob" id="top-title-1"><i class="fa fa-compass"></i></h1>
-								<a href="https://www.google.com/maps/place/Casel's+Marketplace/@39.3295905,-74.4992907,17z/data=!3m1!4b1!4m2!3m1!1s0x89c0ec0a0abca363:0xfead7dceed14182b" id="top-main-cta-2mob">Get Directions</a>
+								<a href="https://www.google.com/maps/place/Casel's+Marketplace/@39.3295905,-74.4992907,17z/data=!3m1!4b1!4m2!3m1!1s0x89c0ec0a0abca363:0xfead7dceed14182b" id="top-main-cta-2mob">Directions</a>
 							</div>
 						</div>
 					</div>
 				</a>
-				<a href="shop" class="no-dec-link">
+				<a href="tel:16098232741" class="no-dec-link">
 					<div id="top-main-rightmob">
 					  <div class="top-main-wrapmob">
 						  <div class="top-main-innermob">

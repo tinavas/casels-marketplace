@@ -46,7 +46,8 @@
     color: white;
 }
 .top-main-titlemob {
-    font-size: 150px;
+    font-size: 125px;
+		margin: 0;
 }
 
 #left-mobile {
