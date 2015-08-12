@@ -22,8 +22,14 @@ class HomeController extends BaseController {
 
 	public function getShop()
 	{
+		return View::make('shop');
+	}
+
+	public function getComingSoon()
+	{
 		return View::make('shopsoon');
 	}
+
 	public function getAbout()
 	{
 		date_default_timezone_set('America/New_York');

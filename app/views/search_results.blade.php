@@ -176,7 +176,7 @@
 									{
 										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
 											->orWhere('description', 'LIKE', '%'. $search_query .'%')
-											->Where('category', '=', 'Silverware')
+											->Where('category', '=', 'Tableware')
 											->get();
 
 										$array_keys = count($results);
