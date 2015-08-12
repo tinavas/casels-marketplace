@@ -4,13 +4,6 @@
 	position: fixed;
 	height: 50px;
 	background: #5191D6;
-	background: -moz-linear-gradient(top, #e4e4e3 0%, #d9d8d9 100%);
-  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e3), color-stop(100%,#d9d8d9)); */
-  /* background: -webkit-linear-gradient(top, #e4e4e3 0%,#d9d8d9 100%); */
-	background: -o-linear-gradient(top, #e4e4e3 0%,#d9d8d9 100%);
-	background: -ms-linear-gradient(top, #e4e4e3 0%,#d9d8d9 100%);
-  /* background: linear-gradient(to bottom, #e4e4e3 0%,#d9d8d9 100%); */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e3', endColorstr='#d9d8d9',GradientType=0 );
 	top: 0;
 	left: 0;
 }

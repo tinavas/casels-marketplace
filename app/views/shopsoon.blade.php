@@ -54,7 +54,7 @@
 	@if ($message = Session::get('alert')) {{ $message }} @endif
 	<div id="form-wrapper-login">
 		<div style="padding-bottom:20px;text-align:center;display:table;">
-			<a href=".\">
+			<a href="./">
 				<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="login-logo" style="padding-top:0;" />
 			</a>
       <h1 id="coming-soon-header">
@@ -66,5 +66,8 @@
       {{ Form::email('mailingListEmail', '', array('id' => 'email-input', 'placeholder' => 'Enter your email...')) }}
       {{ Form::submit('Submit', array('id' => 'email-submit')) }}
     {{ Form::close() }}
+
+    {{ HTML::link('shop', 'Shop Now', array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
+
 	</div>
 </div>
