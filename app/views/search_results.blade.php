@@ -83,8 +83,37 @@
 								</div>
 							</div>
 						</form>
+						<div id="product-list">
 						@if($cat == "Home-Goods")
 							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result);
+							<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title}}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@elseif($cat == "Board-Games")
 							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
@@ -104,218 +133,6 @@
 						@else
 							<strong>Category Parameter is Empty.</strong>
 						@endif
-						<div id="product-list">
-
-								<?php
-									$cat = Input::get('category');
-
-									if($cat == "Home-Goods")
-									{
-										$results = Inventory::where('category', '=', 'Home-Goods')
-											->where('title', 'LIKE', '%'. $search_query .'%')
-											->get();
-										$array_keys = count($results);
-
-										for ($i = 0; $i < $array_keys; $i++)
-										{
-											echo '
-												<div class="product-individual-wrap">
-													<div class="product-picture-list">
-														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-													</div>
-													<div class="product-info">
-														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
-														<div class="product-rating">
-															<p>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-															</p>
-															<strong>$' . $results[$i]["price"] . '</strong>
-													</div>
-														<div class="product-picture-list-mobile">
-															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-														</div>
-														<p class="product-description">
-															' . $results[$i]["description"] . '
-														</p>
-													</div>
-													<div class="cta-product">
-															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
-															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
-													</div>
-												</div>';
-										}
-									}
-
-									elseif($cat == "Board-Games")
-									{
-										$results = Inventory::where('category', '=', 'Board-Games')
-											->where('title', 'LIKE', '%'. $search_query .'%')
-											->get();
-										$array_keys = count($results);
-
-										for ($i = 0; $i < $array_keys; $i++)
-										{
-											echo '
-												<div class="product-individual-wrap">
-													<div class="product-picture-list">
-														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-													</div>
-													<div class="product-info">
-														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
-														<div class="product-rating">
-															<p>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-															</p>
-															<strong>$' . $results[$i]["price"] . '</strong>
-													</div>
-														<div class="product-picture-list-mobile">
-															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-														</div>
-														<p class="product-description">
-															' . $results[$i]["description"] . '
-														</p>
-													</div>
-													<div class="cta-product">
-															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
-															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
-													</div>
-												</div>';
-										}
-									}
-
-									elseif($cat == "Tableware")
-									{
-										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-											->orWhere('description', 'LIKE', '%'. $search_query .'%')
-											->Where('category', '=', 'Tableware')
-											->get();
-
-										$array_keys = count($results);
-										for ($i = 0; $i < $array_keys; $i++)
-										{
-											echo '
-												<div class="product-individual-wrap">
-													<div class="product-picture-list">
-														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-													</div>
-													<div class="product-info">
-														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
-														<div class="product-rating">
-															<p>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-															</p>
-															<strong>$' . $results[$i]["price"] . '</strong>
-													</div>
-														<div class="product-picture-list-mobile">
-															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-														</div>
-														<p class="product-description">
-															' . $results[$i]["description"] . '
-														</p>
-													</div>
-													<div class="cta-product">
-															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
-															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
-													</div>
-												</div>';
-										}
-									}
-									elseif($cat == "Antiques")
-									{
-										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-											//->orWhere('description', 'LIKE', '%'. $search_query .'%')
-											->Where('category', '=', 'Antiques')
-											->get();
-										$array_keys = count($results);
-
-										for ($i = 0; $i < $array_keys; $i++)
-										{
-											echo '
-												<div class="product-individual-wrap">
-													<div class="product-picture-list">
-														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-													</div>
-													<div class="product-info">
-														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
-														<div class="product-rating">
-															<p>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-															</p>
-															<strong>$' . $results[$i]["price"] . '</strong>
-													</div>
-														<div class="product-picture-list-mobile">
-															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-														</div>
-														<p class="product-description">
-															' . $results[$i]["description"] . '
-														</p>
-													</div>
-													<div class="cta-product">
-															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
-															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
-													</div>
-												</div>';
-										}
-									}
-
-									elseif($cat == "Silverware")
-									{
-										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-											//->orWhere('description', 'LIKE', '%'. $search_query .'%')
-											->Where('category', '=', 'Silverware')
-											->get();
-										$array_keys = count($results);
-
-										for ($i = 0; $i < $array_keys; $i++)
-										{
-											echo '
-												<div class="product-individual-wrap">
-													<div class="product-picture-list">
-														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-													</div>
-													<div class="product-info">
-														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
-														<div class="product-rating">
-															<p>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-																<span class="glyphicon glyphicon-star-empty"></span>
-															</p>
-															<strong>$' . $results[$i]["price"] . '</strong>
-													</div>
-														<div class="product-picture-list-mobile">
-															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
-														</div>
-														<p class="product-description">
-															' . $results[$i]["description"] . '
-														</p>
-													</div>
-													<div class="cta-product">
-															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
-															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
-													</div>
-												</div>';
-										}									
-									}
-								?>
 						<!--<div id="side-bar" class="shop-now-side">
 							<img src="./images/sidebar.jpg" id="sidebar-img">
 							<h1 id="sidebar-title">Apply to Become a Casel's Preferred Customer</h1>
