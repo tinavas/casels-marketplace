@@ -12,13 +12,13 @@ date_default_timezone_set('America/New_York');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Casel's Marketplace | Home Page</title>
-	
-	<link rel="shortcut icon" type="image/png" href="http://aidevserver.co/projects/casels/public/images/favicon.png"/> 
-	
+
+	<link rel="shortcut icon" type="image/png" href="http://aidevserver.co/projects/casels/public/images/favicon.png"/>
+
 	<!-- StyleSheets -->
-	{{ HTML::style('css/bootstrap.css'); }} 
-	{{ HTML::style('css/style.css'); }} {{ HTML::style('css/responsive.css'); }} 
-	{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); }} 
+	{{ HTML::style('css/bootstrap.css'); }}
+	{{ HTML::style('css/style.css'); }} {{ HTML::style('css/responsive.css'); }}
+	{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); }}
 	{{ HTML::style('//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css');
 	}}
 	{{ HTML::style('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css'); }}
@@ -57,7 +57,7 @@ date_default_timezone_set('America/New_York');
 </head>
 
 <body>
-	
+
 	<!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDGK4G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NDGK4G');</script>
 <!-- End Google Tag Manager -->
-	
+
 	<!--START header-->
 	<nav>
 		<div id="mobile-nav-wrap">
@@ -127,8 +127,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</div>
 			<div id="hours-check-mobile">
 				<center>
-					
-					
+
+
 					@if($day == 0 )
 							@if($time > 07 and $time > 20)
 								<span style="color:rgb(143, 0, 5);">Sorry We're closed! We open tomorrow at 8am.</span>
@@ -143,7 +143,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										<span style="color:green;" class="joe">We're Open Today Until 10pm!</span>
 								@else <span style="color:rgb(143, 0, 5);">Sorry We're Closed! We Open Today at 8am.</span>
 								@endif
-							
+
 						@elseif($day == 6)
 							@if($time > 07 and $time >22)
 								<span style="color:rgb(143, 0, 5);">Sorry We're closed! We open tomorrow at 8am.</span>
@@ -153,13 +153,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							@endif
 						@else
 					@endif
-				
-				
+
+
 				</center>
 			</div>
-			
-			
-			
+
+
+
 			<div id="mobile-nav-links">
 				<div class="wrapper">
 					<ul>
@@ -225,18 +225,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<ul class="nav nav-tabs" style="float:left;" id="department-main">
 					<li role="presentation" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false" style="padding: 0;border-radius: 0px;background: transparent;color: white;margin-right: 40px;border: 0;">
-							<span style="font-size:11px;">Shop by</span> 
+							<span style="font-size:11px;">Shop by</span>
 							<br /> <span style="font-weight:bold;">Department</span>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Home Goods</a>
+							<li><a href="./shop">Home Goods</a>
 							</li>
-							<li><a href="#">Board Games</a>
+							<li><a href="./shop">Board Games</a>
 							</li>
-							<li><a href="#">Silverware</a>
+							<li><a href="./shop">Silverware</a>
 							</li>
-							<li><a href="#">Antiques</a>
+							<li><a href="./shop">Antiques</a>
 							</li>
 						</ul>
 					</li>
@@ -315,8 +315,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</div>
 			<div id="hours-check-">
 				<center>
-					
-					
+
+
 					@if($day == 0 )
 							@if($time > 07 and $time > 20)
 								<span style="color:rgb(143, 0, 5);">Sorry We're closed! We open tomorrow at 8am.</span>
@@ -331,7 +331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										<span style="color:green;" class="week">We're Open Today Until 10pm!</span>
 								@else <span style="color:rgb(143, 0, 5);">Sorry We're Closed! We Open Today at 8am.</span>
 								@endif
-							
+
 						@elseif($day == 6)
 							@if($time > 07 and $time >22)
 								<span style="color:rgb(143, 0, 5);">Sorry We're closed! We open tomorrow at 8am.</span>
@@ -341,10 +341,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							@endif
 						@else
 					@endif
-				
-				
+
+
 				</center>
-				<i class="fa fa-times" id="hide-hours" style="float:right;margin-top: -22px;margin-right: 15px;font-size:22px;color:rgb(143,0,5);"></i>	
+				<i class="fa fa-times" id="hide-hours" style="float:right;margin-top: -22px;margin-right: 15px;font-size:22px;color:rgb(143,0,5);"></i>
 			</div>
 		</div>
 		<div id="sub-nav-expandable">
