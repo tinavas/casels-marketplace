@@ -23,19 +23,31 @@
 		padding-top: 26px;
 		left: 15px;
 	}
-	#form-wrapper-login {
-		width: 300px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin: -140px 0px 0px -150px;
-	}
+  #form-wrapper-login {
+      width: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 99%;
+  }
 	#userinput {} #password {
 		margin-top: 20px;
 	}
 	#login-logo {
 		max-width: 100%;
 	}
+  #coming-soon-p {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+#coming-soon-header {
+    font-family: 'lithosBlack';
+    color: #8F0005;
+    text-shadow: 1px 1px 3px black;
+    font-size: 50px;
+}
 </style>
 
 <div class="login-container">
