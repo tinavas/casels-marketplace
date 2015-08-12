@@ -85,10 +85,10 @@
 						</form>
 						<div id="product-list">
 						@if($cat == "Home-Goods")
-							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result);
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results);
 							<div class="product-individual-wrap">
 								<div class="product-picture-list">
-									<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
+									<img style="width: 100%; height: auto;" src="{{ $seach_results->picture_id }}" />
 								</div>
 							<div class="product-info">
 								<h3 class="product-name">{{ $search_results->title}}</h3>
