@@ -19,10 +19,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('front-page');
 	}
-	
+
 	public function getShop()
-	{	
-		return View::make('shop');
+	{
+		return View::make('shopsoon');
 	}
 	public function getAbout()
 	{
@@ -30,14 +30,14 @@ class HomeController extends BaseController {
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'About Us'],['pageContent' => "
 			<p><img class='aligncenter size-full wp-image-44' src='./images/about/about_us_store.jpg' alt='' width='100%' height='auto'></p>
 			<p>Since first opening our doors as a small grocery store in Atlantic City in 1929, Casel’s has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors. Today that tradition continues with the Seiden family- Howard, Randi, Rachel and Adam Seiden, who continue to bring that family atmosphere to Casel’s. They have owned the store since 1982, upon purchasing it from the original owners, Abe and Herman Casel. While other businesses have opened and closed, Casel’s continues to turn new visitors into life-long customers by combining the memories, tastes, and smells of eras past with today’s most exciting products from the region and around the world.</p>
 			<p>Casel’s staff makes shopping a pleasure! You’d be hard pressed to find a more knowledgeable, passionate group of food fanatics anywhere. In fact, these folks get such a joy from Casel’s, it’s hard to get them to head home. Perhaps that’s why so many of our team members have been with Casel’s for 30 years or more, like Jack, Director of Store Operations, who started his Casel’s career as a part-time Stock Clerk in 1972. And George, our Head Baker, who has been creating Casel’s killer cinnamon buns from scratch for over three decades.</p>
-			
+
 			<p>Administrative Manager JoAnn joined the team more than 40 years ago in 1975 and has been ensuring smooth sailing ever since. And what began as after school jobs for Clem and Brian, have ripened into careers as Store Manager and Assistant Manager, respectively. Our team does what they love and love what they do. They also live to “talk food” so be sure and tell them all about that exciting new product or recipe you tried.</p>
-			
+
 			<p>At Casel’s, we go beyond the basics to surprise and entice you. A few times each year, Jack and Clem attend food shows to bring you artisan products, specialty foods, and ethnic brands you won’t find anywhere else. A popular stop for busy moms and professionals, our deli is full of pre-cooked meals, side-dishes, and sensational salads. Our butcher offers the finest cuts of quality meats, oceans of tasty treasures await your discovery in our seafood department, and our produce department is always brimming with farm-fresh fruits and vegetables each season.</p>
 			<p style='text-align:center;font-family:lithos;font-size:18px;  margin: 40px 0 0 0;'><strong>CASEL’S VALUED SENIOR STAFF</strong></p>
 			<div style='display:table;width:100%;height:auto;padding:40px 0;'>
@@ -133,7 +133,7 @@ class HomeController extends BaseController {
 						</div>
 						<div class='item'>
 							<div class='fill' style='background-image:url(./images/about/bakery-3.jpg);'></div>
-							
+
 								<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
@@ -141,23 +141,23 @@ class HomeController extends BaseController {
 									  </p>
 									</div>
 								</div>
-							
+
 						</div>
 						<div class='item'>
 							<div class='fill' style='background-image:url(./images/about/about-5.jpg);'></div>
-							
+
 								<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
-									  Worn out from the sun? Need a drink to give you that much needed natural energy boost this summer? Get your fruit servings 'on the go' and try Casels wide selection of fruit juices. 
+									  Worn out from the sun? Need a drink to give you that much needed natural energy boost this summer? Get your fruit servings 'on the go' and try Casels wide selection of fruit juices.
 									  </p>
 									</div>
 								</div>
-							
+
 						</div>
 						<div class='item'>
 							<div class='fill' style='background-image:url(./images/about/about-12.jpg);'></div>
-							
+
 								<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
@@ -165,11 +165,11 @@ class HomeController extends BaseController {
 									  </p>
 									</div>
 								</div>
-							
+
 						</div>
 						<div class='item'>
 							<div class='fill' style='background-image:url(./images/about/about-1.jpg);'></div>
-							
+
 								<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
@@ -177,11 +177,11 @@ class HomeController extends BaseController {
 									  </p>
 									</div>
 								</div>
-							
+
 						</div>
 						<div class='item'>
 							<div class='fill' style='background-image:url(./images/about/about-8.jpg);'></div>
-							
+
 								<div class='wrapper'>
 									<div class='carousel-caption'>
 									  <p>
@@ -251,9 +251,9 @@ class HomeController extends BaseController {
 						<span class='icon-next'></span>
 					</a>
 				</header>
-				
 
-			
+
+
 			"]);
 	}
 	public function getCatering()
@@ -262,18 +262,18 @@ class HomeController extends BaseController {
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Catering'],['pageContent' => '
 			<p style="margin-bottom:20px">
-			Our trays are the best in South Jersey. Our staff can accommodate any request. For the freshest sandwich, meat and smoked fish trays for all occasions…our catering department is at your service. Dessert trays, Fruit trays, Vegetable trays among others available. Call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.		
+			Our trays are the best in South Jersey. Our staff can accommodate any request. For the freshest sandwich, meat and smoked fish trays for all occasions…our catering department is at your service. Dessert trays, Fruit trays, Vegetable trays among others available. Call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.
 			</p>
 			<center><a href="./images/catering/catering_brochure_new.pdf" target="_blank" id="view-brochure">View Brochure</a></center>
-			
+
 			<p></p>
-			
+
 			<div id="page-main-title" style="margin: 20px 0;"></div>
 			<div id="catering-selector">
-	<!--appitizer platters-->				
+	<!--appitizer platters-->
 				<h1 id="appitizers-sel" class="catering-title-selector">Appetizers & Desserts<span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="appitizers-dropdown">
 					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
@@ -336,9 +336,9 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
-	
-	
-	<!--Party platters-->			
+
+
+	<!--Party platters-->
 				<h1 id="party-sel" class="catering-title-selector">Party Platters <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="party-dropdown">
 					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
@@ -369,11 +369,11 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
-	
-	
-	<!--Dinners-->	
+
+
+	<!--Dinners-->
 				<h1 id="dinners-sel"  class="catering-title-selector">Dinners <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
-				
+
 					<div id="dinners-dropdown">
 						<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager and let us help you with your menu. Here are just four of the possibilities...</p>
 						<div class="catering-sub-wrap-top">
@@ -410,9 +410,9 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
-	
-	
-	<!--fruits and baskets-->				
+
+
+	<!--fruits and baskets-->
 				<h1 id="baskets-sel"  class="catering-title-selector">Gift & Fruit Baskets<span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="baskets-dropdown">
 					<p>We can accomodate any request just call <a href="tel:16098232741" class="bold-link">609-823-2741.</a> Ask for Jessica, our Catering manager.</p>
@@ -443,8 +443,8 @@ class HomeController extends BaseController {
 						</div>
 					</div>
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>
-	
-	
+
+
 	<!--Desserts platters
 				<h1 id="desserts-sel" class="catering-title-selector">Desserts <span style="float:right;"><i class="fa fa-chevron-circle-down"></i></span></h1>
 					<div id="desserts-dropdown">
@@ -468,7 +468,7 @@ class HomeController extends BaseController {
 				<div id="page-main-title" style="margin: 20px 0;padding:0;"></div>-->
 			</div>
 
- 
+
 	']);
 	}
 	public function getDelivery()
@@ -477,22 +477,22 @@ class HomeController extends BaseController {
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Home Delivery'],['pageContent' => '
 		<h3 style="font-family: lithosBlack;">Do your grocery shopping from home!</h3>
 		<p>Delivery to your door is available at Casels. Order by noon for afternoon delivery, Monday - Friday. Just <strong>$12.50</strong>.</p>
-		
+
 		<p>To place your order please call <a href="tel:16098231805" class="bold-link">609-823-1805</a> and ask for our personal shopper, Joan Lucas. Or you can fax your order to <a href="tel:16098231805" class="bold-link">609-823-0894</a>. Also, you can email your order to <a href="mailto:JoAnn@casels.com." class="bold-link">JoAnn@casel’s.com.</a></p>
-		
+
 		<p>If you fax or email, please call JoAnn Sedlock, our Administrative Store Manager, to let her know you placed an order. There is no other business that takes the time and care in making sure the items you ordered are fresh and correctly picked. Casel’s personal service is something we take pride in.</p>
-		
+
 		<p>Casels has been a family-owned market focused on bringing the finest quality ingredients to friends and neighbors.</p>
-		
+
 		<div id="page-main-title">
 		</div>
-		
+
 		<img src="./images/Casels-129.jpg" alt="Casels Home Delivery" />
-		
+
 		<!--<form method="POST" action="#">
 			<div class="left-form-part">
 				<p>First Name*:</p>
@@ -521,7 +521,7 @@ class HomeController extends BaseController {
 				</div>
 			</div>
 		</form>-->
-		
+
 		']);
 	}
 	public function getCareers()
@@ -530,14 +530,14 @@ class HomeController extends BaseController {
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Careers'],['pageContent' => '
 			<p>
 			<div id="careers-hover">
 				<img src="./images/careers-ps.jpg" id="chover-hide">
 				<a href="http://casels.com/PDFs/emp_app_form.pdf" id="chover-link">Apply Today</a>
 			</div>
-			
+
 			From time to time, <strong>Casel’s</strong> has opportunities for hard-working, dependable, service-oriented individuals to serve our customers.<br>
 			<p>We are currently looking to fill positions.</p>
 			<br>Please feel free to fill out an application for employment, and we will contact you or keep your name on file for consideration. Click on the button below to download and print the application; you can fill it out and bring (or mail) it to our store.</p>
@@ -551,14 +551,14 @@ class HomeController extends BaseController {
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Contact Us'],['pageContent' => ' <style>
       #map-canvas {
         width: 100%;
         height: 400px;
       }
     </style>
-	
+
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
 function initialize() {
@@ -581,9 +581,9 @@ google.maps.event.addDomListener(window, "load", initialize);
 
     </script>
 		 <script src="https://maps.googleapis.com/maps/api/js"></script>
- 
+
 		<div id="map-canvas">
-		
+
 		</div>
 		<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.1763443021364!2d-74.49929099999996!3d39.32959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0ec0a0abca363%3A0xfead7dceed14182b!2sCasel&#39;s+Supermarket!5e0!3m2!1sen!2sus!4v1426100197875" width="100%" height="450" frameborder="0" scrollwheel="false" style="border:0;pointer-events:none;"></iframe>-->
 			<div id="left-contact">
@@ -637,7 +637,7 @@ google.maps.event.addDomListener(window, "load", initialize);
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('get-card');
 	}
 	public function getPrivacyPolicy()
@@ -646,7 +646,7 @@ google.maps.event.addDomListener(window, "load", initialize);
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Privacy Policy'],['pageContent' => '
 			Privacy Policy
 We, the Operators of this Website, provide it as a public service to our users.
@@ -704,7 +704,7 @@ Please contact info@argyleinteractive.com for any inquiries.
 		$currenttime = date('H:a:w');
 		list($hrs,$ampm,$day) = preg_split('/[: -]/', $currenttime);
 		$final_time = $hrs;
-		
+
 		return View::make('internal',['pageTitle' => 'Terms of Use'],['pageContent' => '
 			Terms of Use
 Legal Notices
