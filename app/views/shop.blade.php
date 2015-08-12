@@ -111,6 +111,7 @@
 												<option>Board-Games</option>
 												<option>Silverware</option>
 												<option>Antiques</option>
+												<option>Tableware</option>
 											</select>
 										</div>
 									</div>
