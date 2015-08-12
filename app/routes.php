@@ -59,7 +59,8 @@ Route::get('/cart/addFromShop/{ID}', 'FunctionsController@getAddItemFromShop');
 Route::get('/cart/remove/{ID}', 'FunctionsController@getRemoveItemFromCart');
 Route::get('/cart/add/one/{ID}', 'FunctionsController@getAddOneItemToCart');
 /* End Cart Routing */
-Route::post('/search', 'FunctionsController@postSearch');
+//Route::post('/search', 'FunctionsController@postSearch');
+Route::post('/search', 'FunctionsController@getComingSoon');
 Route::get('/checkout/finish', 'PayPalPaymentController@getStore');
 Route::get('/checkout', 'PayPalPaymentController@store');
 
