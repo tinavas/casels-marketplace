@@ -83,7 +83,27 @@
 								</div>
 							</div>
 						</form>
-
+						@if($cat == "Home-Goods")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result);
+							@endforeach
+						@elseif($cat == "Board-Games")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@endforeach
+						@elseif($cat == "Silverware")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@endforeach
+						@elseif($cat == "Tableware")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@endforeach
+						@elseif($cat == "Antiques")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@endforeach
+						@elseif($cat == "SomeCategoy")
+							@foreach(Inventory::where('category' == $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@endforeach
+						@else
+							<strong>Category Parameter is Empty.</strong>
+						@endif
 						<div id="product-list">
 
 								<?php
@@ -91,8 +111,8 @@
 
 									if($cat == "Home-Goods")
 									{
-										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-											->where('category', '=', 'Home-Goods')
+										$results = Inventory::where('category', '=', 'Home-Goods')
+											->where('title', 'LIKE', '%'. $search_query .'%')
 											->get();
 										$array_keys = count($results);
 
@@ -132,9 +152,8 @@
 
 									elseif($cat == "Board-Games")
 									{
-										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-											//->orWhere('description', 'LIKE', '%'. $search_query .'%')
-											->where('category', '=', 'Board-Games')
+										$results = Inventory::where('category', '=', 'Board-Games')
+											->where('title', 'LIKE', '%'. $search_query .'%')
 											->get();
 										$array_keys = count($results);
 
