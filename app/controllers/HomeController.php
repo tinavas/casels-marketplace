@@ -22,7 +22,7 @@ class HomeController extends BaseController {
 
 	public function getShop()
 	{
-		return View::make('shop');
+		return View::make('shopsoon');
 	}
 
 	public function getComingSoon()
