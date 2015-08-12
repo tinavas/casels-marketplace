@@ -117,18 +117,158 @@
 							@endforeach
 						@elseif($cat == "Board-Games")
 							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
+														<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title }}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@elseif($cat == "Silverware")
 							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
+														<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title }}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@elseif($cat == "Tableware")
 							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
+														<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title }}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@elseif($cat == "Antiques")
 							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
+														<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title }}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@elseif($cat == "SomeCategoy")
 							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
+														<div class="product-individual-wrap">
+								<div class="product-picture-list">
+									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+								</div>
+							<div class="product-info">
+								<h3 class="product-name">{{ $search_results->title }}</h3>
+							<div class="product-rating">
+								<p>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+									<span class="glyphicon glyphicon-star-empty"></span>
+								</p>
+								<strong>{{ $search_results->price }}</strong>
+							</div>
+							<div class="product-picture-list-mobile">
+								<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
+							</div>
+								<p class="product-description">
+									{{ $search_results->description }}
+								</p>
+							</div>
+							<div class="cta-product">
+								<a href="{{ URL::to('product/' . $search_results->id) }}" class="learn-more"> Learn More</a>
+								<a href="{{ URL::to('cart/addFromShop/' . $search_results->id) }}" class="buy-now">Add To Cart</a>`
+							</div>
+						</div>
 							@endforeach
 						@else
 							<strong>Category Parameter is Empty.</strong>
