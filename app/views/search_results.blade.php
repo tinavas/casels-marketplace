@@ -172,15 +172,15 @@
 										}
 									}
 
-									elseif($cat == "Silverware")
+									elseif($cat == "Tableware")
 									{
-											$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
-												->orWhere('description', 'LIKE', '%'. $search_query .'%')
-												->Where('category', '=', 'Silverware')
-												->get();
+										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
+											->orWhere('description', 'LIKE', '%'. $search_query .'%')
+											->Where('category', '=', 'Silverware')
+											->get();
 
-											$array_keys = count($results);
-											for ($i = 0; $i < $array_keys; $i++)
+										$array_keys = count($results);
+										for ($i = 0; $i < $array_keys; $i++)
 										{
 											echo '
 												<div class="product-individual-wrap">
@@ -211,10 +211,8 @@
 															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
 													</div>
 												</div>';
-											}
 										}
-
-
+									}
 									elseif($cat == "Antiques")
 									{
 										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
@@ -257,9 +255,46 @@
 										}
 									}
 
-									else
+									elseif($cat == "Silverware")
 									{
-										//invalid category
+										$results = Inventory::where('title', 'LIKE', '%'. $search_query .'%')
+											//->orWhere('description', 'LIKE', '%'. $search_query .'%')
+											->Where('category', '=', 'Silverware')
+											->get();
+										$array_keys = count($results);
+
+										for ($i = 0; $i < $array_keys; $i++)
+										{
+											echo '
+												<div class="product-individual-wrap">
+													<div class="product-picture-list">
+														<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
+													</div>
+													<div class="product-info">
+														<h3 class="product-name">' . $results[$i]["title"] . '</h3>
+														<div class="product-rating">
+															<p>
+																<span class="glyphicon glyphicon-star"></span>
+																<span class="glyphicon glyphicon-star"></span>
+																<span class="glyphicon glyphicon-star"></span>
+																<span class="glyphicon glyphicon-star-empty"></span>
+																<span class="glyphicon glyphicon-star-empty"></span>
+															</p>
+															<strong>$' . $results[$i]["price"] . '</strong>
+													</div>
+														<div class="product-picture-list-mobile">
+															<img style="width: 100%; height: auto;" src="' . $results[$i]["picture_id"] . '" />
+														</div>
+														<p class="product-description">
+															' . $results[$i]["description"] . '
+														</p>
+													</div>
+													<div class="cta-product">
+															<a href="product/' . $results[$i]["id"] . '" class="learn-more"> Learn More</a>
+															<a href="cart/addFromShop/' . $results[$i]["id"] . '" class="buy-now">Add To Cart</a>`
+													</div>
+												</div>';
+										}									
 									}
 								?>
 						<!--<div id="side-bar" class="shop-now-side">
