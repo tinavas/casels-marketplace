@@ -83,8 +83,8 @@
 				<div id="top-main-leftmob">
 					<div class="top-main-wrapmob">
 						<div class="top-main-innermob">
-							<a href="get-card" class="no-dec-link"><h1 class="top-main-title" id="top-title-1">Apply to Become A Casel's Preferred Customer</h1></a>
-							{{ HTML::link('get-card', 'Learn More', array('class' => 'top-main-cta', 'id' => 'top-main-cta-1')) }}
+							<a href="get-card" class="no-dec-link"><h1 class="top-main-title" id="top-title-1"><i class="fa fa-compass"></i></h1></a>
+							{{ HTML::link('get-card', 'Learn More', array( 'id' => 'top-main-cta-2mob')) }}
 
 						</div>
 					</div>
@@ -92,8 +92,8 @@
 				<div id="top-main-rightmob">
 				  <div class="top-main-wrapmob">
 					  <div class="top-main-innermob">
-						  <a href="shop" class="no-dec-link"><h1 class="top-main-title" id="top-title-2">Shop Casel's Online</h1></a>
-						  {{ HTML::link('shop', 'Shop Now', array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
+						  <a href="shop" class="no-dec-link"><h1 class="top-main-title" id="top-title-2"><i class="fa fa-mobile"></i></h1></a>
+						  {{ HTML::link('shop', 'Shop Now', array( 'id' => 'top-main-cta-2mob')) }}
 					  </div>
 				  </div>
 				</div>
