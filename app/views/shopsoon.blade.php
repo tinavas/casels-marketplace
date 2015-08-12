@@ -66,8 +66,8 @@
       {{ Form::email('mailingListEmail', '', array('id' => 'email-input', 'placeholder' => 'Enter your email...')) }}
       {{ Form::submit('Submit', array('id' => 'email-submit')) }}
     {{ Form::close() }}
-
-    {{ HTML::link('shop', 'Shop Now', array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
-
+    <div style=" text-align: center;">
+      {{ HTML::link("", "Return to Casel's.com", array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
+    </div>
 	</div>
 </div>
