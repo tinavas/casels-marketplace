@@ -116,19 +116,19 @@
 						</div>
 							@endforeach
 						@elseif($cat == "Board-Games")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
 							@endforeach
 						@elseif($cat == "Silverware")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
 							@endforeach
 						@elseif($cat == "Tableware")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
 							@endforeach
 						@elseif($cat == "Antiques")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
 							@endforeach
 						@elseif($cat == "SomeCategoy")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_result->get() as $search_result);
+							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->get() as $search_results)
 							@endforeach
 						@else
 							<strong>Category Parameter is Empty.</strong>
