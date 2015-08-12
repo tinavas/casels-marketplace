@@ -7,37 +7,37 @@
 		prlx_lyr_2.style.top = (200 - (window.pageYOffset / 2)) + 'px';
 	}
 	window.addEventListener("scroll", parallax, false);
-	
+
 	$(window).load(function() {
 		$('.home-logo-animater').animate(
 			{left:"0"},
-			
+
 				1500,
 				'easeInOutExpo'
 			);
 		$('.home-text-animater').delay(500).animate(
 			{left:"0"},
-			
+
 				1500,
 				'easeInOutExpo'
 			);
-		
+
 		var pictures = ['url(images/home/Casels-38.jpg)','url(images/home/Casels-42.jpg)','url(images/home/Casels-100.jpg)','url(images/home/home-salad.jpg)','url(images/home/gluten-home.jpg)','url(images/home/Casels-36.jpg)'],
         textalign =['left','right','right','left','right','right','right'],
 			i = 0,
         $body = $('#main-picture-home');
-    
-    	setInterval(function(){ 
+
+    	setInterval(function(){
 			$body.css('background', pictures[i % pictures.length]).css('background-size','cover');
 			$('#home-text').css('text-align', textalign[i % textalign.length]);
 			i++;
-							  
+
 							  }, 7000);
-		
+
 		var $changer = $("#home-text-changing"),
 			words = ['Baked Goods','Fresh Produce','Crab Cakes','Fresh Salads','Gluten Free','Everything'],
 			w = 0;
-		
+
 		setInterval(function(){ $changer.text(words[w++ % words.length]).fadeIn()},7000);
 	});
 </script>
@@ -46,7 +46,7 @@
 		<div class="wrapper">
 			<div class="home-logo-animater">
 				<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="mobile-nav-logo" class="home-logo-animater" style="width:300px;margin-bottom:15px;" /><br />
-			</div>	
+			</div>
 			<div class="home-text-animater">
 				<h1 class="carousel-main">"The Best of <br/><span id="home-text-changing">Everything</span>"</h1>
 				<p class="carousel-sub">Hand Selected for the Best Quality</p>
@@ -74,10 +74,32 @@
 			@if ($errors->has())
 				<div class="alert alert-danger">
 					@foreach ($errors->all() as $error)
-						{{ $error }}<br>        
+						{{ $error }}<br>
 					@endforeach
 				</div>
 			@endif
+
+			<div id="mobile-phone-dir">
+				<div id="top-main-leftmob">
+					<div class="top-main-wrapmob">
+						<div class="top-main-innermob">
+							<a href="get-card" class="no-dec-link"><h1 class="top-main-title" id="top-title-1">Apply to Become A Casel's Preferred Customer</h1></a>
+							{{ HTML::link('get-card', 'Learn More', array('class' => 'top-main-cta', 'id' => 'top-main-cta-1')) }}
+
+						</div>
+					</div>
+				</div>
+				<div id="top-main-rightmob">
+				  <div class="top-main-wrapmob">
+					  <div class="top-main-innermob">
+						  <a href="shop" class="no-dec-link"><h1 class="top-main-title" id="top-title-2">Shop Casel's Online</h1></a>
+						  {{ HTML::link('shop', 'Shop Now', array('class' => 'top-main-cta', 'id' => 'top-main-cta-2')) }}
+					  </div>
+				  </div>
+				</div>
+			</div>
+
+
 			<div id="top-main-left">
 				<div class="top-main-wrap">
 					<div class="top-main-inner">

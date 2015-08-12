@@ -8,6 +8,10 @@
 	left: 0;
 }
 
+#mobile-phone-dir{
+	display:none;
+}
+
 #left-mobile {
 	float: left;
 }
