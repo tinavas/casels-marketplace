@@ -732,13 +732,53 @@ class FunctionsController extends BaseController {
 	public function postSearch() {
 		$search_query = Input::get('search');
 		$search_amount = Input::get('amount');
-		
-		$searchData = array(
-			'query' => $search_query,
-			'amount' => $search_amount
-		);
-		
-		return View::make('search_results')->with('search_query', $search_query)->with('search_amount');
+		$cat = Input::get('category');
+		$min_price = Input::get('min_price');
+		$max_price = Input::get('max_price');
+
+		if($cat == null){
+			if($min_price == null){
+				$min_price = 0;
+				if($max_price == null){
+					$max_price = 999999999;
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query)->with()
+				}
+				else{
+					$max_price = Input::get('max_price');
+				}
+			}
+			else{
+				$min_price = Input::get('min_price');
+				if($max_price == null){
+					$max_price = 999999999;
+				}
+				else{
+					$max_price = Input::get('max_price');
+				}				
+			}
+		}
+		elseif($cat != null){
+			//$cat = Input::get('category');
+			if($min_price == null){
+				$min_price = 0;
+				if($max_price == null){
+					$max_price = 999999999;
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query)->with()
+				}
+				else{
+					$max_price = Input::get('max_price');
+				}
+			}
+			else{
+				$min_price = Input::get('min_price');
+				if($max_price == null){
+					$max_price = 999999999;
+				}
+				else{
+					$max_price = Input::get('max_price');
+				}				
+			}			
+		}
 	}
 	
 	
