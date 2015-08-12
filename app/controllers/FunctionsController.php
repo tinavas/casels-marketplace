@@ -745,15 +745,18 @@ class FunctionsController extends BaseController {
 				}
 				else{
 					$max_price = Input::get('max_price');
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 			}
 			else{
 				$min_price = Input::get('min_price');
 				if($max_price == null){
 					$max_price = 999999999;
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 				else{
 					$max_price = Input::get('max_price');
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}				
 			}
 		}
@@ -767,15 +770,18 @@ class FunctionsController extends BaseController {
 				}
 				else{
 					$max_price = Input::get('max_price');
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 			}
 			else{
 				$min_price = Input::get('min_price');
 				if($max_price == null){
 					$max_price = 999999999;
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 				else{
 					$max_price = Input::get('max_price');
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}				
 			}			
 		}
