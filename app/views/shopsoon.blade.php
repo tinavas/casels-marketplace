@@ -4,7 +4,7 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
-		background: url(images/login-bg.jpg);
+		background: url(images/shopsoon-bg.jpg);
 		background-size: cover;
 		background-position: 50%;
 	}
@@ -45,12 +45,14 @@
 			<a href=".\">
 				<img src={{ URL::asset( 'images/logo-new.png') }} alt="Casel's Logo" id="login-logo" style="padding-top:0;" />
 			</a>
+      <h1 id="coming-soon-header">
+        Relax! Our store is coming soon!
+      </h1>
+      <p id="coming-soon-p">Enter you email below to be the first to know when we launch!</p>
 		</div>
     {{ Form::open(array('url' => 'email')) }}
       {{ Form::email('mailingListEmail', '', array('id' => 'email-input', 'placeholder' => 'Enter your email...')) }}
       {{ Form::submit('Submit', array('id' => 'email-submit')) }}
     {{ Form::close() }}
-		<a href="http://aidevserver.co/projects/casels/public/register" style="color: white;float:right;font-size: 12px;">Register -&gt;</a>
-
 	</div>
 </div>
