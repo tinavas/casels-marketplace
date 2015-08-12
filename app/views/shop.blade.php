@@ -119,11 +119,11 @@
 										<p style="font-weight:bold;">
 											Min Price:
 										</p>
-										<input name="minprice">
+										<input name="min_price">
 										<p style="font-weight:bold;">
 											Max Price:
 										</p>
-										<input name="maxprice">
+										<input name="max_price">
 									</div>
 									<!--<div id="price-selector">
 										<p>
