@@ -741,7 +741,7 @@ class FunctionsController extends BaseController {
 				$min_price = 0;
 				if($max_price == null){
 					$max_price = 999999999;
-					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query)->with()
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 				else{
 					$max_price = Input::get('max_price');
@@ -763,7 +763,7 @@ class FunctionsController extends BaseController {
 				$min_price = 0;
 				if($max_price == null){
 					$max_price = 999999999;
-					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query)->with()
+					return View::make('search_results')->with('min_price', $min_price)->with('max_price', $max_price)->with('search_query', $search_query);
 				}
 				else{
 					$max_price = Input::get('max_price');
