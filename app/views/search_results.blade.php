@@ -84,8 +84,11 @@
 							</div>
 						</form>
 						<div id="product-list">
+						<?php 
+							$inventory = Inventory::where('category', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->whereBetween('price', [$min_price, $max_price])->get();
+						?>
 						@if($cat == "Home-Goods")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results);
+							@foreach($inventory as $search_results)
 							<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
@@ -116,7 +119,7 @@
 						</div>
 							@endforeach
 						@elseif($cat == "Board-Games")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results)
+							@foreach($inventory as $search_results)
 														<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
@@ -147,7 +150,7 @@
 						</div>
 							@endforeach
 						@elseif($cat == "Silverware")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results)
+							@foreach($inventory as $search_results)
 														<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
@@ -178,7 +181,7 @@
 						</div>
 							@endforeach
 						@elseif($cat == "Tableware")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results)
+							@foreach($inventory as $search_results)
 														<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
@@ -209,7 +212,7 @@
 						</div>
 							@endforeach
 						@elseif($cat == "Antiques")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results)
+							@foreach($inventory as $search_results)
 														<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
@@ -240,7 +243,7 @@
 						</div>
 							@endforeach
 						@elseif($cat == "SomeCategoy")
-							@foreach(Inventory::where('category', '=', $cat)->where('title', 'LIKE', '%'. $search_query .'%')->where('price', 'BETWEEN', $min_price, 'AND', $max_price)->get() as $search_results)
+							@foreach($inventory as $search_results)
 														<div class="product-individual-wrap">
 								<div class="product-picture-list">
 									<img style="width: 100%; height: auto;" src="{{ $search_results->picture_id }}" />
